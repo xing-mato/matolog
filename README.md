@@ -1,9 +1,9 @@
 # MATOlog
 
 **A local-only event recorder for Android.** It quietly logs which app you're using, and lets you
-write down anything by hand. 
+write down anything by hand,can help you review what you did throughout the day
 
-**一个只存在本机的安卓事件记录本。** 它按分钟记下你在用哪个应用，也让你随手写一条
+**一个只存在本机的安卓事件记录本。** 它按分钟记下你在用哪个应用，也让你随手写一条，帮助你复盘一天中都做了什么
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/Platform-Android%2024%2B-green.svg)
