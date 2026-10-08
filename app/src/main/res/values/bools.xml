@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  取证开关：把每次采样「判成了哪个前台应用」写进系统日志。
+
+  它是排查用的，不是给用户的功能 —— 小窗 / 分屏这类问题没法凭空复现，
+  只能装到出问题的那台机器上、让它自己把每一次判定说清楚。
+  日志里只有包名与候选列表，不带任何记录内容（全工程日志的一贯口径）。
+
+  正式包必须保持 false。调试包在 app/src/debug/res/values/bools.xml 里覆盖成 true，
+  所以「出一个带取证的包」现在等于「直接出调试包」，不用再去改代码。
+
+  看日志（这台 ROM 默认把应用日志压到 E 级，要先按 tag 放开）：
+    adb shell setprop log.tag.MATOrec V
+    adb logcat -c; adb logcat -s MATOrec
+-->
+<resources>
+    <bool name="trace_foreground">false</bool>
+</resources>

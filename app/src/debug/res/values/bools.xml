@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  只给调试包用的资源覆盖（release 包完全不受影响）。
+
+  为什么需要它：取证开关（Recorder 的每次采样判定）在正式包里必须是关的，
+  但排查问题时又必须能打开。做成「按构建类型分流」之后，
+  「出一个带取证的包」就是出一遍调试包，不必再去改源码、也不会忘了改回来 ——
+  1.3.3 那轮就是在源码里改这一行来取证的，出包前还得记着改回去。
+
+  看日志（这台 ROM 默认把应用日志压到 E 级，要先按 tag 放开）：
+    adb shell setprop log.tag.MATOrec V
+    adb logcat -c; adb logcat -s MATOrec
+-->
+<resources>
+    <bool name="trace_foreground">true</bool>
+</resources>

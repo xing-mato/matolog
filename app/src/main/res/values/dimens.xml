@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gutter">18dp</dimen>
+    <dimen name="card_radius">3dp</dimen>
+    <dimen name="hairline">1px</dimen>
+</resources>

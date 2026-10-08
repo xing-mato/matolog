@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  深色配色。
+
+  只覆盖同名色名，布局与 drawable 里的 @color/xxx 引用一行都不用改 —— 这是本次
+  加深色模式代价极低的原因（全工程 12 个布局、35 个 drawable 零硬编码颜色）。
+
+  调色思路：不是把浅色简单取反，而是重新配一套「深墨绿纸」。底色带一点绿，
+  和主色 primary 同源，避免出现冷灰底 + 绿按钮那种拼接感。
+-->
+<resources>
+
+    <!-- 底：比纯黑柔和，长时间看不刺眼 -->
+    <color name="paper">#FF12140F</color>
+    <color name="surface">#FF1B1F19</color>
+
+    <!-- 墨：不用纯白，降一点亮度并带一丝绿，和底色同一家族 -->
+    <color name="ink">#FFE6EAE3</color>
+    <color name="ink_soft">#FF9AA396</color>
+    <color name="ink_faint">#FF6B7367</color>
+
+    <!-- 线 -->
+    <color name="divider">#FF2C322A</color>
+    <color name="divider_soft">#FF23281F</color>
+    <color name="line">#FF3A4238</color>
+
+    <!-- 主色：深色下要提亮，否则在深底上「陷」进去 -->
+    <color name="primary">#FF7FB68F</color>
+    <color name="primary_soft">#FF23342A</color>
+    <color name="primary_pressed">#FF2E4536</color>
+
+    <color name="today">#FF1F2A22</color>
+    <color name="ripple_soft">#1FFFFFFF</color>
+    <color name="attach_tint">#FF6B7367</color>
+    <color name="empty_stroke">#FF4A5246</color>
+    <color name="source_tag_bg">#FF232922</color>
+    <color name="source_tag_line">#FF333A31</color>
+    <color name="warn">#FFD9A05E</color>
+
+</resources>

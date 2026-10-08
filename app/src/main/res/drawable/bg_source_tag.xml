@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 「自动 / 屏幕」小标：极淡的底 + 细描边，只用来区分来源，不该抢正文的注意力。
+     用语义色名，深色下自动跟着变。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/source_tag_bg" />
+    <stroke
+        android:width="1px"
+        android:color="@color/source_tag_line" />
+    <corners android:radius="3dp" />
+</shape>

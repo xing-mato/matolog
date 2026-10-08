@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  深色下的控件样式。
+
+  为什么必须单独写：styles.xml 里的控件样式父类点名了 Widget.Material.Light.*
+  （不是 Theme.*），所以换主题父类并不会让它们变深色 —— 输入框、复选框、
+  分段按钮的默认底纹仍然是浅色那套，在深底上会显得突兀。
+  这里把父类换成对应的 Widget.Material.*，其余保持不变。
+
+  文字样式（Text.*）不需要在这里重复：它们只引用 @color/ink 之类的语义色，
+  那些色值已经由 values-night/colors.xml 覆盖了。
+-->
+<resources>
+
+    <style name="Widget.MATOlog.Button" parent="@android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/btn_quiet</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Widget.MATOlog.ImageButton" parent="@android:style/Widget.Material.ImageButton">
+        <item name="android:background">@drawable/ripple_round</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="Widget.MATOlog.EditText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">@drawable/bg_field</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textColorHint">@color/ink_faint</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Widget.MATOlog.Segment" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:background">@drawable/seg_background</item>
+        <item name="android:textColor">@color/seg_text</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="Widget.MATOlog.CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:button">@drawable/bg_check_on</item>
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:minHeight">30dp</item>
+    </style>
+
+</resources>

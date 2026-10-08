@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通知栏小图标：必须是纯色剪影（系统只取 alpha 通道），画的是本应用的「横线记录」标志 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,16.5h18v1.8h-18z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,11.1h12v1.8h-12z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,5.7h15.5v1.8h-15.5z" />
+</vector>

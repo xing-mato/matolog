@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MATOlog</string>
+    <string name="tagline">이벤트 기록</string>
+
+    <!-- 开屏 -->
+    <string name="splash_sub">세 가지만 합니다: 기록하고, 다시 찾아보고, 가지고 나가기</string>
+
+    <!-- 检索跨度 -->
+    <string name="level_day">일</string>
+    <string name="level_month">월</string>
+    <string name="level_year">년</string>
+    <string name="ctx_year_scope">연 보기</string>
+    <string name="nav_prev">이전 구간</string>
+    <string name="nav_next">다음 구간</string>
+
+    <!-- 主页关键词检索（1.3.5） -->
+    <string name="search_title">검색</string>
+    <string name="search_hint">설명이나 앱 이름 검색</string>
+    <string name="search_empty_hint">키워드를 입력해 모든 기록에서 찾습니다.</string>
+    <string name="search_no_result">「%1$s」이(가) 포함된 기록이 없습니다</string>
+    <string name="search_count">%1$d개 찾음</string>
+    <string name="search_capped">최근 %1$d개만 표시했습니다. 더 구체적인 키워드를 쓰면 더 넓게 볼 수 있습니다.</string>
+
+    <string name="action_add">새로 만들기</string>
+    <string name="action_save">저장</string>
+    <string name="action_cancel">취소</string>
+    <string name="action_delete">삭제</string>
+    <string name="action_edit">편집</string>
+    <string name="action_back">뒤로</string>
+    <string name="action_more">더보기</string>
+    <string name="action_ok">확인</string>
+
+    <!-- 安全层：应用锁 -->
+    <string name="lock_setup_title">앱 잠금 설정</string>
+    <string name="lock_setup_msg">기록에 4–6자리 숫자 암호를 설정합니다. 암호는 솔트가 적용된 해시로 이 기기에만 저장되며, 잊어버리면 되찾을 수 없습니다. 데이터는 그대로 남습니다.</string>
+    <string name="lock_confirm_title">한 번 더 입력</string>
+    <string name="lock_verify_title">암호 입력</string>
+    <string name="lock_wrong">암호가 맞지 않습니다</string>
+    <string name="lock_skip">나중에 설정</string>
+    <string name="lock_skipped">건너뛰었습니다. 메뉴에서 언제든 설정할 수 있습니다</string>
+    <string name="lock_mismatch">두 번의 입력이 다릅니다</string>
+    <string name="passcode_hint">암호</string>
+    <string name="passcode_too_short">암호는 최소 4자리입니다</string>
+    <string name="passcode_enabled">앱 잠금이 켜졌습니다</string>
+
+    <!-- 安全层：加密导出 -->
+    <string name="export_encrypt_label">암호화</string>
+    <string name="export_encrypt_on">이 파일을 암호화</string>
+    <string name="export_encrypt_off">암호화하지 않음 (평문 JSON)</string>
+    <string name="import_passcode_title">예전 버전의 암호화 내보내기입니다</string>
+    <string name="import_passcode_msg">1.3 이하의 암호화 파일은 키를 암호에 묶어 두었기 때문에, 그때 내보낼 때 정한 암호를 입력해야 합니다. 1.3.1부터는 암호가 필요 없습니다.</string>
+    <string name="import_passcode_wrong">암호가 맞지 않습니다 (이 파일은 1.3 이하 버전에서 만들어졌으므로 그때 쓴 암호가 필요합니다)</string>
+    <string name="import_corrupt">이 암호화 파일은 손상되었거나 변경되어 풀 수 없습니다</string>
+
+    <!-- 编辑界面 -->
+    <string name="edit_title_new">기록 만들기</string>
+    <string name="edit_title_edit">기록 편집</string>
+    <string name="edit_time_label">시간</string>
+    <string name="edit_time_hint">눌러서 수정</string>
+    <string name="edit_desc_label">설명</string>
+    <string name="edit_desc_hint">무슨 일이 있었는지 적어 두세요…</string>
+    <string name="edit_empty_warning">아직 내용이 없습니다</string>
+    <string name="edit_saved">저장했습니다</string>
+    <string name="edit_deleted">삭제했습니다</string>
+    <string name="delete_confirm_title">이 기록을 삭제할까요?</string>
+
+    <!-- 列表 / 空态 -->
+    <string name="empty_day">이 날에는 기록이 없습니다</string>
+    <string name="empty_month">이 달에는 기록이 없습니다</string>
+    <string name="empty_year">이 해에는 기록이 없습니다</string>
+    <string name="empty_hint">오른쪽 아래 「새로 만들기」를 눌러 한 가지를 기록하세요</string>
+    <string name="count_unit">개</string>
+    <string name="count_none">—</string>
+    <string name="hint_tap_day">날짜를 누르면 → 그날의 모든 기록을 봅니다</string>
+    <string name="hint_tap_month">달을 누르면 → 그 달의 달력을 봅니다</string>
+
+    <!-- 菜单 -->
+    <string name="menu_export">JSON 내보내기</string>
+    <string name="menu_import">JSON 가져오기</string>
+    <string name="menu_backup">백업과 복원</string>
+    <string name="menu_attachments">첨부 파일</string>
+    <string name="menu_settings">설정</string>
+    <string name="menu_about">정보</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">설정</string>
+    <string name="settings_section_look">화면</string>
+    <string name="settings_dark">다크 모드</string>
+
+    <!-- 设置：自动记录 -->
+    <string name="settings_section_record">자동 기록</string>
+    <string name="settings_section_more">목록과 권한</string>
+    <string name="settings_auto_record">자동 기록</string>
+    <string name="settings_on">켜짐</string>
+    <string name="settings_off">꺼짐</string>
+    <string name="settings_interval">샘플링 간격</string>
+    <string name="settings_interval_msg">얼마마다 포그라운드 앱을 확인할지 정합니다. 짧을수록 상시 알림이 더 빠르게 따라오고 구간 경계도 더 정확하지만, 배터리를 조금 더 씁니다. 초 단위로 입력하며 기본값은 5입니다. 화면이 꺼지면 자동으로 느려집니다.</string>
+    <string name="settings_min_keep">이보다 짧으면 제외</string>
+    <string name="settings_min_keep_msg">너무 짧은 조각은 잡음이 되므로 기본값은 요구대로 5분입니다. 0을 입력하면 전부 기록합니다(기준 없음).</string>
+    <string name="settings_min_keep_all">전부 기록</string>
+    <!-- 自定义分钟输入：单位、范围提示、0 的特殊含义 -->
+    <string name="settings_minutes_unit">분</string>
+    <string name="settings_seconds_unit">초</string>
+    <string name="settings_minutes_range">%1$d에서 %2$d 사이의 정수를 입력하세요</string>
+    <string name="settings_seconds_range">%1$d에서 %2$d초 사이의 정수를 입력하세요</string>
+    <string name="settings_min_keep_zero_hint">0을 입력하면 전부 기록합니다. 아무리 짧은 조각도 타임라인에 남습니다.</string>
+    <string name="settings_record_no_perm">자동 기록이 켜져 있지만 「사용 정보 접근」 권한이 없어 아직 기록하지 못합니다. 아래 「권한과 백그라운드 유지」에서 허용하세요.</string>
+    <string name="settings_record_started">기록을 시작했습니다</string>
+    <string name="settings_record_stopped">기록을 중지했습니다</string>
+    <string name="settings_need_perm_title">권한이 하나 부족합니다</string>
+    <string name="settings_need_perm_msg">자동 기록은 「사용 정보 접근」이 있어야 포그라운드 앱이 무엇인지 알 수 있습니다. 없으면 켜도 아무것도 기록되지 않으니, 먼저 허용해 주세요.</string>
+    <string name="settings_go_grant">허용하러 가기</string>
+
+    <!-- 设置：名单与权限 -->
+    <string name="settings_rules">앱 목록</string>
+    <string name="settings_rules_none">설정 안 함</string>    <string name="settings_perm">권한과 백그라운드 유지</string>
+    <string name="settings_perm_ok">준비됨</string>
+    <string name="settings_perm_need">권한 부족</string>
+
+    <!-- 设置：数据与缓存 -->
+    <string name="settings_section_data">데이터와 캐시</string>
+    <string name="settings_cache">캐시 디렉터리</string>
+
+    <!-- 外观：语言（1.3.5） -->
+    <string name="settings_lang">언어</string>
+    <string name="lang_follow">시스템 설정 따르기</string>
+    <string name="lang_zh_cn">简体中文</string>
+    <string name="lang_zh_tw">繁體中文</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국어</string>
+    <string name="lang_en">English</string>
+
+    <!-- 深色档位 -->
+    <string name="dark_follow">시스템 설정 따르기</string>
+    <string name="dark_on">항상 어둡게</string>
+    <string name="dark_off">항상 밝게</string>
+
+    <!-- 自动记录：状态行与常驻通知 -->
+    <string name="rec_note_no_foreground">현재 포그라운드 앱이 없습니다</string>
+    <string name="rec_note_self">이 앱 자신이므로 집계하지 않습니다</string>
+    <string name="rec_note_shell">시스템 UI이므로 기록하지 않습니다</string>
+    <string name="rec_note_excluded">제외 목록에 있습니다</string>
+    <string name="rec_note_recording">기록 중</string>
+    <string name="rec_note_screen_off">화면이 꺼져 있습니다</string>
+    <string name="rec_note_no_perm">「사용 정보 접근」 권한이 없어 포그라운드 앱을 읽을 수 없습니다</string>
+    <string name="rec_note_nothing">화면은 켜져 있지만 기록할 포그라운드 앱이 없습니다</string>
+    <string name="rec_note_waiting">포그라운드 앱을 기다리는 중</string>
+    <string name="rec_note_no_perm_short">사용 정보 접근 권한이 없습니다</string>
+    <string name="rec_note_sample_error">샘플링 오류: %1$s</string>
+    <string name="rec_preparing_title">기록을 준비하는 중</string>
+    <string name="rec_preparing_text">포그라운드 앱을 읽어 이벤트 기록을 만듭니다</string>
+    <string name="rec_recording_title">기록 중</string>
+    <string name="rec_no_noti_perm">시스템 설정에서 이 앱이 알림을 보내도록 허용해 주세요</string>
+    <string name="rec_inactive_title">기록이 작동하지 않습니다</string>
+    <string name="rec_inactive_text">「사용 정보 접근」 권한이 없습니다. 눌러서 설정으로 이동하세요</string>
+    <string name="rec_waiting_title">기록 중 · 포그라운드 앱 대기</string>
+    <string name="rec_now_title">기록 중 · %1$s</string>
+    <string name="rec_noti_text">%1$s 지속 · 오늘 %2$d개</string>
+    <string name="rec_action_refresh">새로 고침</string>
+    <string name="rec_action_stop">끄기</string>
+    <string name="rec_channel_name">자동 기록</string>
+    <string name="rec_channel_desc">기록 중일 때 표시되는 상시 알림입니다. 여기서 새로 고치거나 끌 수 있습니다</string>
+
+    <!-- 设置页里那些「当前值」 -->
+    <string name="settings_rules_n">%1$d개 제외됨</string>
+    <string name="settings_interval_sec">%1$d초마다</string>
+    <string name="settings_interval_min">%1$d분마다</string>
+    <string name="settings_interval_note">%1$s 포그라운드 앱을 확인하므로, 구간 경계가 최대 이만큼 늦어집니다.</string>
+    <string name="settings_min_keep_n">%1$d분보다 짧으면</string>
+
+    <!-- 名单页的汇总 -->
+    <string name="rules_summary_some">앱 %1$d개를 제외했습니다(위로 정렬됨). 나머지는 모두 기록됩니다.</string>
+    <string name="rules_summary_none">제외한 앱이 없습니다. 이 앱 자신과 시스템 UI를 빼고 모두 기록됩니다.</string>
+
+    <!-- 缓存页 -->
+    <string name="cache_tmp_label">임시 파일: %1$s</string>
+    <string name="cache_total">합계 %1$s.</string>
+    <string name="cache_usage_note">모두 중간 산출물이라 지워도 기록된 이벤트와 설정에는 영향이 없습니다.</string>
+
+    <!-- 附件存法（长文案）。短标签另有 attach_mode_internal / attach_mode_reference -->
+    <string name="attach_mode_internal_long">앱 안에 저장</string>
+    <string name="attach_mode_reference_long">원본 파일 참조</string>
+
+    <!-- 导出落点 -->
+    <string name="export_downloads_prefix">다운로드/%1$s</string>
+
+    <!-- 权限页的状态说明 -->
+    <string name="perm_mark_on">켜짐</string>
+    <string name="perm_mark_go">켜러 가기</string>
+    <string name="perm_state_cannot">지금은 기록할 수 없습니다: 「사용 정보 접근」이 없습니다.</string>
+    <string name="perm_state_can">지금은 기록할 수 있습니다:</string>
+    <string name="perm_state_running">\n\n기록 서비스가 실행 중입니다.</string>
+    <string name="perm_state_rules">\n\n앱 %1$d개를 제외했습니다. 나머지는 모두 기록됩니다.</string>
+
+    <!-- Shizuku（可选增强，只在装了它时才出现） -->
+    <string name="shizuku_not_installed">Shizuku가 설치되어 있지 않습니다</string>
+    <string name="shizuku_not_running">Shizuku가 실행되고 있지 않습니다. 먼저 Shizuku를 열어 서비스를 시작하세요</string>
+    <string name="shizuku_too_old">Shizuku 버전이 너무 오래되었습니다 (v11 이상 필요)</string>
+    <string name="shizuku_no_permission">아직 이 앱에 Shizuku 권한이 없습니다</string>
+    <string name="shizuku_ready">사용 가능</string>
+
+    <!-- 设置：诊断（1.3.5） -->
+    <string name="settings_section_diag">진단</string>
+    <string name="settings_errorlog">오류 로그 내보내기</string>
+    <string name="settings_errorlog_none">내보낼 내용이 없습니다</string>
+    <string name="settings_errorlog_n">%1$d개 · 최근 %2$s</string>
+    <string name="settings_errorlog_clear">오류 로그 비우기</string>
+    <string name="settings_errorlog_clear_title">오류 로그를 비울까요?</string>
+    <string name="settings_errorlog_clear_msg">모두 %1$d개, 최근 %2$s.\n\n비우면 내보낼 수 없으니, 남길 기록이 있다면 먼저 내보내세요.</string>
+    <string name="settings_errorlog_clear_ok">비우기</string>
+    <string name="settings_errorlog_cleared">오류 로그를 비웠습니다</string>
+    <string name="settings_errorlog_gate">지금은 내보낼 내용이 없습니다 — 앱이 아직 어떤 문제도 기록하지 않았습니다</string>
+    <string name="settings_errorlog_failed">내보내기에 실패했습니다. 「다운로드」 디렉터리에 쓰지 못했습니다</string>
+
+    <!-- 1.3.5：原来这里是一整段「自动整理（接入模型）」的文案 ——
+         ai_title / ai_section_* / ai_provider* / ai_use_* / ai_base* /
+         ai_key* / ai_http_warning / ai_model* / ai_need_* / ai_test* /
+         ai_run_now / ai_queued / ai_off_hint / ai_log_empty，共 39 条。
+         需求把自动整理整块删掉，这些文案一并移除：留着它们只会让翻译
+         白翻一遍、让 lint 报一批无人引用，而它们在界面上永远不会出现。 -->
+
+    <!-- 缓存目录 -->
+    <string name="cache_title">캐시 디렉터리</string>
+    <string name="cache_section_usage">사용량</string>
+    <string name="cache_section_actions">정리</string>
+    <string name="cache_clear_all">모든 캐시 비우기</string>
+    <string name="cache_cleared_n">%1$d개 정리함</string>
+    <string name="cache_note">캐시는 앱 전용 디렉터리에 있어 저장 공간 권한이 필요 없습니다. 케이블을 연결하거나 파일 관리자로 직접 보고 지울 수 있으며, 앱을 삭제하면 시스템이 함께 지웁니다. 기록 자체는 데이터베이스에 있으므로 여기와는 무관합니다.</string>
+
+    <!-- 导出：日期区间 -->
+    <string name="export_title">JSON 내보내기</string>
+    <string name="export_range_label">내보낼 범위</string>
+    <string name="export_range_today">오늘</string>
+    <string name="export_range_week">이번 주</string>
+    <string name="export_range_month">이번 달</string>
+    <string name="export_range_year">올해</string>
+    <string name="export_range_all">모든 날짜</string>
+    <string name="export_range_custom">날짜 직접 선택</string>
+    <string name="export_field_from">시작</string>
+    <string name="export_field_to">끝</string>
+    <string name="export_files_label">첨부 파일</string>
+    <string name="export_files_off">기록만 내보내고 첨부는 제외</string>
+    <string name="export_files_on">첨부 내용도 함께 내보내기 (파일이 커집니다)</string>
+    <string name="export_files_note">기본값은 기록만 내보내고 첨부는 이 기기에 남깁니다. 첨부를 함께 내보내면 다른 기기로 가져올 때 파일도 같이 따라옵니다.</string>
+    <string name="export_summary">기록 %1$d개 · %2$s 내보내기</string>
+    <string name="export_summary_files">기록 %1$d개 · %2$s · 첨부 %3$d개(%4$s) 내보내기</string>
+    <string name="export_range_none">이 구간에는 기록이 없습니다</string>
+    <string name="export_go">저장 위치 선택</string>
+    <string name="export_range_invalid">끝 날짜는 시작 날짜보다 빠를 수 없습니다</string>
+    <string name="export_missing_title">읽을 수 없는 첨부가 있습니다</string>
+    <string name="export_missing_msg">이 구간의 첨부 중 옮겨졌거나 삭제된 것이 있어 내용을 함께 가져갈 수 없습니다(등록 정보는 파일에 기록됩니다). 계속 내보낼까요?</string>
+    <string name="export_missing_keep">계속 내보내기</string>
+
+    <!-- 附件 -->
+    <string name="attach_section">첨부</string>
+    <string name="attach_add">첨부 추가</string>
+    <string name="attach_hint">기본값은 이 기기에 남기며, 내보낼 때 함께 가져갈지 고를 수 있습니다</string>
+    <string name="attach_way_title">이 첨부를 어떻게 저장할까요</string>
+    <string name="attach_way_internal">앱 안에 저장</string>
+    <string name="attach_way_reference">원본 파일 참조</string>
+    <string name="attach_mode_internal">앱 내부</string>
+    <string name="attach_mode_reference">참조</string>
+    <string name="attach_failed">이 파일을 읽을 수 없습니다. 다른 파일로 해보세요</string>
+    <string name="attach_missing">파일이 없습니다</string>
+    <string name="attach_open_failed">이 파일을 열 수 없습니다. 이미 옮겨졌거나 삭제되었을 수 있습니다</string>
+    <string name="attach_count">%1$d개</string>
+    <string name="attach_delete_title">이 첨부를 삭제할까요?</string>
+    <string name="attach_delete_msg">%1$s\n\n앱 안에 저장된 파일은 함께 삭제됩니다. 참조형은 등록만 해제하고 원본 파일은 건드리지 않습니다.</string>
+    <string name="attach_deleted">첨부를 삭제했습니다</string>
+
+    <!-- 删除事件时对附件的处理 -->
+    <string name="delete_attach_title">이 기록에 첨부가 있습니다</string>
+    <string name="delete_attach_msg">첨부가 모두 %1$d개입니다. 함께 삭제할까요, 아니면 나중에 「첨부 파일」에서 보도록 남겨 둘까요?</string>
+    <string name="delete_attach_together">첨부도 함께 삭제</string>
+    <string name="delete_attach_keep">첨부 유지</string>
+    <string name="delete_attach_kept_hint">기록을 삭제했습니다. 첨부는 메뉴 「첨부 파일」에 남아 있습니다</string>
+
+    <!-- 附带文件（孤立附件）页 -->
+    <string name="attach_page_title">첨부 파일</string>
+    <string name="attach_page_empty">따로 관리할 첨부가 없습니다</string>
+    <string name="attach_page_clear">모두 정리</string>
+    <string name="attach_page_clear_title">첨부 파일을 모두 삭제할까요?</string>
+    <string name="attach_page_clear_msg">모두 %1$d개 파일, %2$s. 삭제하면 되돌릴 수 없습니다.</string>
+    <string name="attach_page_sweep">등록되지 않은 잔여 파일 정리</string>
+    <string name="attach_page_swept">%1$s 정리함</string>
+    <string name="attach_page_swept_none">남은 잔여 파일이 없습니다</string>
+    <string name="attach_page_open">열기</string>
+    <string name="attach_page_total">앱 내부 첨부 모두 %1$d개 · %2$s 사용</string>
+    <string name="attach_external_note">이 중 %1$d개는 「원본 파일 참조」입니다. 파일은 휴대폰의 원래 위치에 있고 앱은 주소만 기억하므로 사용 공간은 0입니다.</string>
+
+    <!-- 备份 -->
+    <string name="backup_title">백업과 복원</string>
+    <string name="backup_local_title">이 기기 백업</string>
+    <string name="backup_local_desc">내보낼 때마다 이 기기 백업을 자동으로 남기며, 최대 12개까지 보관합니다.</string>
+    <string name="backup_export">파일로 내보내기</string>
+    <string name="backup_import">파일에서 가져오기</string>
+    <string name="backup_now">지금 백업</string>
+    <string name="backup_now_done">이 기기에 백업을 하나 남겼습니다</string>
+    <string name="backup_restore">복원</string>
+    <string name="backup_delete">삭제</string>
+    <string name="backup_restore_hint">줄을 누르면 그 백업을 복원합니다 · 오른쪽은 삭제</string>
+    <string name="backup_none">이 기기 백업이 아직 없습니다</string>
+    <string name="backup_restore_title">이 백업을 복원할까요?</string>
+    <string name="backup_restore_msg">백업의 기록으로 현재의 모든 기록을 덮어씁니다. 복원 전에 현재 데이터를 자동으로 백업합니다.</string>
+    <string name="backup_delete_title">이 백업을 삭제할까요?</string>
+    <string name="backup_done">내보냈습니다</string>
+    <string name="export_nothing">아직 내보낼 기록이 없습니다</string>
+    <string name="export_where_title">어디로 내보낼까요</string>
+    <string name="export_where_msg">현재 기록이 모두 %1$d개입니다. 시스템 「다운로드」 디렉터리에 저장하는 것이 가장 간단하고, 위치를 직접 고를 수도 있습니다.</string>
+    <string name="export_where_download">다운로드 디렉터리에 저장</string>
+    <string name="export_where_pick">위치 직접 선택</string>
+    <string name="export_saved_to">%1$s에 저장했습니다</string>
+    <string name="export_need_permission">저장 권한이 없어 위치를 직접 골라 저장합니다</string>
+    <string name="export_retry_title">이 위치에 쓸 수 없습니다</string>
+    <string name="export_retry_msg">파일 내용은 이 기기에 저장해 두었고, 고른 위치에만 쓰지 못했습니다. 다른 위치에 다시 저장할까요?</string>
+    <string name="export_retry_yes">다른 위치</string>
+    <string name="export_retry_keep">나중에</string>
+    <string name="export_pending_title">지난번 내보내기가 아직 끝나지 않았습니다</string>
+    <string name="export_pending_msg">내용은 이 기기에 저장해 두었습니다. 시스템이 그 저장을 중단했는데, 지금 파일로 마저 저장할까요?</string>
+    <string name="export_pending_save">지금 마저 저장</string>
+    <string name="export_pending_discard">필요 없음</string>
+    <string name="backup_export_failed">내보내기 실패</string>
+    <string name="backup_import_failed">가져오기 실패, 파일 형식을 알아볼 수 없습니다</string>
+    <string name="backup_import_title">이 기록들을 가져올까요?</string>
+    <string name="import_mode_merge">병합 (중복 건너뛰기)</string>
+    <string name="import_mode_append">모두 추가</string>
+    <string name="import_mode_replace">비우고 가져오기</string>
+    <string name="backup_summary">모두 %1$d개 · %2$s</string>
+    <string name="backup_imported">%1$d개 가져옴</string>
+    <string name="import_files_registered_only">첨부 %1$d개는 등록 정보만 가져왔습니다(내보낼 때 「첨부 내용도 함께 내보내기」를 선택하지 않았습니다). 파일은 원래 기기에 그대로 있습니다</string>
+
+    <!-- 记录来源小标（混排时用来区分自动记录与手动记录） -->
+    <string name="source_auto">자동</string>
+    <string name="source_screen">화면</string>
+
+    <!-- 自动记录 / 无障碍 -->
+    <!-- 无障碍相关的字符串已于 1.3 随服务一并移除。
+         真机（OriginOS 6 / Android 16）上该服务会被系统反复回收，
+         而自动记录不依赖它也能完整工作。 -->
+
+    <!-- 权限引导页 -->
+    <string name="perm_title">권한과 백그라운드 유지</string>
+    <string name="perm_section_state">현재 상태</string>
+    <string name="perm_usage">사용 정보 접근</string>
+    <string name="perm_notify">알림</string>
+    <string name="perm_battery">배터리 최적화 예외</string>
+    <string name="perm_autostart">자동 시작</string>
+    <string name="perm_autostart_fallback">이 기기 시스템의 자동 시작 페이지를 찾지 못해 대체 화면을 열었습니다. 아래 안내를 보고 찾아보세요</string>
+    <string name="perm_autostart_note_done">위 페이지에서 설정했습니다. 이 항목은 시스템에 인터페이스가 없어 앱이 실제 상태를 확인할 수 없으므로, 이 「켜짐」은 시스템이 읽은 값이 아니라 직접 조작한 기록입니다. 나중에 시스템에서 껐다면 이 줄을 다시 눌러 표시를 해제할 수 있습니다.\n새로 설치한 기기에서는 제조사의 자동 시작 목록에 이 앱이 반영되기까지 재부팅이 한 번 필요할 수 있습니다.\n사실 이 단계를 하지 않아도 기록에는 영향이 없습니다 — 「부팅 후 자동으로 이어서 기록할 수 있는지」에만 관계됩니다.</string>
+    <string name="perm_autostart_note_vendor">「%1$s」을(를) 열었습니다. 이 앱을 찾아(목록은 앱 이름 순) 「부팅 시 시작 / 백그라운드 시작」을 모두 켜 주세요.</string>
+    <string name="perm_autostart_note_manager">이 기기 시스템의 자동 시작 페이지를 찾지 못해 제조사의 권한 관리 앱을 열었습니다. 그 안에서 「자동 시작 / 백그라운드 시작 / 부팅 시 시작」 같은 항목을 찾아보세요.</string>
+    <string name="perm_autostart_note_detail">이 기기 시스템의 자동 시작 페이지를 찾지 못해 앱 상세 화면을 열었습니다. 이 기기에는 별도의 자동 시작 스위치가 없을 수 있습니다(일부 ROM은 배터리나 백그라운드 관리에 합쳐 두었습니다).</string>
+    <string name="perm_autostart_unmarked">표시를 해제했습니다. 다시 설정할 수 있습니다</string>
+
+    <!-- 权限页：Shizuku（仅当本机装了 Shizuku 才显示这一段）。
+         标题写成「实验性功能」而不是「Shizuku」：这一段是可选增强，
+         而且依赖第三方应用与它的授权状态，随时可能不可用 ——
+         把它当正式功能摆出来，用户会以为缺了它应用就不完整。 -->
+    <string name="perm_section_shizuku">실험적 기능</string>
+    <string name="perm_shizuku">Shizuku</string>
+    <string name="perm_shizuku_granted">Shizuku 권한을 얻었습니다</string>
+    <string name="perm_shizuku_denied">Shizuku 권한이 없습니다</string>
+    <string name="perm_shizuku_request_failed">권한 요청을 시작하지 못했습니다. 먼저 Shizuku 앱에서 서비스를 실행하세요</string>
+    <string name="perm_shizuku_not_ready">Shizuku를 아직 쓸 수 없습니다</string>
+    <string name="perm_usage_already">「사용 정보 접근」이 이미 있습니다</string>
+    <string name="perm_usage_granted">Shizuku로 「사용 정보 접근」을 켰습니다</string>
+    <string name="perm_usage_grant_failed">Shizuku가 켜지 못했습니다. 위 경로로 직접 켜 주세요</string>
+
+    <!-- 应用名单页 -->
+    <string name="rules_title">앱 목록</string>
+    <string name="rules_search">앱 이름이나 패키지 이름 검색</string>
+    <string name="rules_exclude">제외</string>
+    <string name="rules_no_match">일치하는 앱이 없습니다</string>
+    <!-- 全部已安装应用有好几百个（含系统组件），一次全铺出来会卡，所以分页。
+         %1$d 是当前搜索词下还没渲染出来的条数 -->
+    <string name="rules_show_more">더 보기 (%1$d개 남음)</string>
+
+    <!-- 关于 -->
+    <string name="about_title">정보</string>    
+    <string name="about_version">버전 %1$s (%2$d)</string>
+    <string name="about_pkg">패키지 이름 %1$s</string>
+</resources>

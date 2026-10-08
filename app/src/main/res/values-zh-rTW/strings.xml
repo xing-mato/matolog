@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MATOlog</string>
+    <string name="tagline">事件記錄</string>
+
+    <!-- 开屏 -->
+    <string name="splash_sub">只做三件事：記下來、翻回去、帶走</string>
+
+    <!-- 检索跨度 -->
+    <string name="level_day">日</string>
+    <string name="level_month">月</string>
+    <string name="level_year">年</string>
+    <string name="ctx_year_scope">年檢視</string>
+    <string name="nav_prev">上一段</string>
+    <string name="nav_next">下一段</string>
+
+    <!-- 主页关键词检索（1.3.5） -->
+    <string name="search_title">檢索</string>
+    <string name="search_hint">搜尋描述或應用程式名稱</string>
+    <string name="search_empty_hint">輸入關鍵字，在全部記錄裡找。</string>
+    <string name="search_no_result">沒有找到含「%1$s」的記錄</string>
+    <string name="search_count">找到 %1$d 筆</string>
+    <string name="search_capped">只顯示了最近 %1$d 筆。換個更具體的關鍵字能看得更完整。</string>
+
+    <string name="action_add">新增</string>
+    <string name="action_save">儲存</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_delete">刪除</string>
+    <string name="action_edit">編輯</string>
+    <string name="action_back">返回</string>
+    <string name="action_more">更多</string>
+    <string name="action_ok">確定</string>
+
+    <!-- 安全层：应用锁 -->
+    <string name="lock_setup_title">設定應用鎖</string>
+    <string name="lock_setup_msg">給記錄加一道 4–6 位數字密碼。密碼只以加鹽雜湊保存在本機，忘記後無法找回，但資料仍在。</string>
+    <string name="lock_confirm_title">再輸入一次</string>
+    <string name="lock_verify_title">輸入密碼</string>
+    <string name="lock_wrong">密碼不對</string>
+    <string name="lock_skip">暫不設定</string>
+    <string name="lock_skipped">已跳過，隨時可以在選單裡設定</string>
+    <string name="lock_mismatch">兩次輸入不一致</string>
+    <string name="passcode_hint">密碼</string>
+    <string name="passcode_too_short">密碼至少 4 位</string>
+    <string name="passcode_enabled">應用鎖已開啟</string>
+
+    <!-- 安全层：加密导出 -->
+    <string name="export_encrypt_label">加密</string>
+    <string name="export_encrypt_on">加密這個檔案</string>
+    <string name="export_encrypt_off">不加密（明文 JSON）</string>
+    <string name="import_passcode_title">這是一份舊版加密匯出</string>
+    <string name="import_passcode_msg">1.3 及更早的加密檔案把金鑰綁在密碼上，所以需要輸入當初匯出時設定的那串密碼。1.3.1 起不再需要密碼。</string>
+    <string name="import_passcode_wrong">密碼不對（這份檔案來自 1.3 及更早的版本，必須用當時那串密碼）</string>
+    <string name="import_corrupt">這份加密檔案已損毀或被改動過，解不開</string>
+
+    <!-- 编辑界面 -->
+    <string name="edit_title_new">新增記錄</string>
+    <string name="edit_title_edit">編輯記錄</string>
+    <string name="edit_time_label">時間</string>
+    <string name="edit_time_hint">點一下修改</string>
+    <string name="edit_desc_label">描述</string>
+    <string name="edit_desc_hint">寫下發生了什麼…</string>
+    <string name="edit_empty_warning">還沒有寫內容</string>
+    <string name="edit_saved">已儲存</string>
+    <string name="edit_deleted">已刪除</string>
+    <string name="delete_confirm_title">確定刪除這筆記錄？</string>
+
+    <!-- 列表 / 空态 -->
+    <string name="empty_day">這一天還沒有記錄</string>
+    <string name="empty_month">這個月還沒有記錄</string>
+    <string name="empty_year">這一年還沒有記錄</string>
+    <string name="empty_hint">點右下角「新增」記下一件事</string>
+    <string name="count_unit">筆</string>
+    <string name="count_none">—</string>
+    <string name="hint_tap_day">點某一天 → 看這一天的全部記錄</string>
+    <string name="hint_tap_month">點某個月 → 看這個月的日曆</string>
+
+    <!-- 菜单 -->
+    <string name="menu_export">匯出 JSON</string>
+    <string name="menu_import">匯入 JSON</string>
+    <string name="menu_backup">備份與還原</string>
+    <string name="menu_attachments">附加檔案</string>
+    <string name="menu_settings">設定</string>
+    <string name="menu_about">關於</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">設定</string>
+    <string name="settings_section_look">外觀</string>
+    <string name="settings_dark">深色模式</string>
+
+    <!-- 设置：自动记录 -->
+    <string name="settings_section_record">自動記錄</string>
+    <string name="settings_section_more">名單與權限</string>
+    <string name="settings_auto_record">自動記錄</string>
+    <string name="settings_on">已開啟</string>
+    <string name="settings_off">已關閉</string>
+    <string name="settings_interval">取樣間隔</string>
+    <string name="settings_interval_msg">每隔多久看一次前景應用程式。越短，常駐通知跟得越緊、分段邊界也越準，代價是稍微耗電。填秒數，預設 5。螢幕熄滅時會自動放慢。</string>
+    <string name="settings_min_keep">短於多久不計</string>
+    <string name="settings_min_keep_msg">太短的片段會變成雜訊，依需求預設為 5 分鐘。填 0 表示全部都記（不設門檻）。</string>
+    <string name="settings_min_keep_all">全部都記</string>
+    <!-- 自定义分钟输入：单位、范围提示、0 的特殊含义 -->
+    <string name="settings_minutes_unit">分鐘</string>
+    <string name="settings_seconds_unit">秒</string>
+    <string name="settings_minutes_range">請填 %1$d 到 %2$d 之間的整數</string>
+    <string name="settings_seconds_range">請填 %1$d 到 %2$d 秒之間的整數</string>
+    <string name="settings_min_keep_zero_hint">填 0 表示全部都記，再短的片段也留在時間軸上。</string>
+    <string name="settings_record_no_perm">自動記錄已開啟，但缺少「使用情況存取」權限，現在還記不了。點下面的「權限與常駐」去授予。</string>
+    <string name="settings_record_started">已開始記錄</string>
+    <string name="settings_record_stopped">已停止記錄</string>
+    <string name="settings_need_perm_title">還缺一個權限</string>
+    <string name="settings_need_perm_msg">自動記錄需要「使用情況存取」才能知道前景是哪個應用程式。沒有它，開啟了也不會記下任何東西 —— 所以先去把它打開。</string>
+    <string name="settings_go_grant">前往授予</string>
+
+    <!-- 设置：名单与权限 -->
+    <string name="settings_rules">應用程式名單</string>
+    <string name="settings_rules_none">未設定</string>
+    <string name="settings_perm">權限與常駐</string>
+    <string name="settings_perm_ok">已就緒</string>
+    <string name="settings_perm_need">缺權限</string>
+
+    <!-- 设置：数据与缓存 -->
+    <string name="settings_section_data">資料與快取</string>
+    <string name="settings_cache">快取目錄</string>
+
+    <!-- 外观：语言（1.3.5） -->
+    <string name="settings_lang">語言</string>
+    <string name="lang_follow">跟隨系統</string>
+    <string name="lang_zh_cn">简体中文</string>
+    <string name="lang_zh_tw">繁體中文</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국어</string>
+    <string name="lang_en">English</string>
+
+    <!-- 深色档位 -->
+    <string name="dark_follow">跟隨系統</string>
+    <string name="dark_on">一律深色</string>
+    <string name="dark_off">一律淺色</string>
+
+    <!-- 自动记录：状态行与常驻通知 -->
+    <string name="rec_note_no_foreground">目前沒有前景應用程式</string>
+    <string name="rec_note_self">本應用程式本身，不計入</string>
+    <string name="rec_note_shell">系統介面，不記錄</string>
+    <string name="rec_note_excluded">在排除名單裡</string>
+    <string name="rec_note_recording">記錄中</string>
+    <string name="rec_note_screen_off">螢幕已關閉</string>
+    <string name="rec_note_no_perm">缺少「使用情況存取」權限，讀不到前景應用程式</string>
+    <string name="rec_note_nothing">螢幕亮著，但沒有可記錄的前景應用程式</string>
+    <string name="rec_note_waiting">等待前景應用程式</string>
+    <string name="rec_note_no_perm_short">缺少使用情況存取權限</string>
+    <string name="rec_note_sample_error">取樣發生錯誤：%1$s</string>
+    <string name="rec_preparing_title">正在準備記錄</string>
+    <string name="rec_preparing_text">讀取前景應用程式以產生事件記錄</string>
+    <string name="rec_recording_title">正在記錄</string>
+    <string name="rec_no_noti_perm">請在系統設定裡允許本應用程式傳送通知</string>
+    <string name="rec_inactive_title">記錄未生效</string>
+    <string name="rec_inactive_text">缺少「使用情況存取」權限，點此前往設定</string>
+    <string name="rec_waiting_title">記錄中 · 等待前景應用程式</string>
+    <string name="rec_now_title">記錄中 · %1$s</string>
+    <string name="rec_noti_text">已持續 %1$s · 今天 %2$d 筆</string>
+    <string name="rec_action_refresh">重新整理</string>
+    <string name="rec_action_stop">關閉</string>
+    <string name="rec_channel_name">自動記錄</string>
+    <string name="rec_channel_desc">正在記錄時顯示的常駐通知，可在此重新整理或關閉</string>
+
+    <!-- 设置页里那些「当前值」 -->
+    <string name="settings_rules_n">已排除 %1$d 個</string>
+    <string name="settings_interval_sec">每 %1$d 秒</string>
+    <string name="settings_interval_min">每 %1$d 分鐘</string>
+    <string name="settings_interval_note">%1$s看一次前景應用程式，分段邊界最多晚這麼久。</string>
+    <string name="settings_min_keep_n">短於 %1$d 分鐘</string>
+
+    <!-- 名单页的汇总 -->
+    <string name="rules_summary_some">已排除 %1$d 個應用程式（已置頂），其餘都會記錄。</string>
+    <string name="rules_summary_none">沒有排除任何應用程式：除本應用程式本身與系統介面外，都會記錄。</string>
+
+    <!-- 缓存页 -->
+    <string name="cache_tmp_label">暫存檔案：%1$s</string>
+    <string name="cache_total">合計 %1$s。</string>
+    <string name="cache_usage_note">這些都是中間產物，刪掉不會影響已記錄的事件，也不影響任何設定。</string>
+
+    <!-- 附件存法（长文案）。短标签另有 attach_mode_internal / attach_mode_reference -->
+    <string name="attach_mode_internal_long">應用程式內儲存</string>
+    <string name="attach_mode_reference_long">引用原始檔案</string>
+
+    <!-- 导出落点 -->
+    <string name="export_downloads_prefix">下載/%1$s</string>
+
+    <!-- 权限页的状态说明 -->
+    <string name="perm_mark_on">已開啟</string>
+    <string name="perm_mark_go">去開啟</string>
+    <string name="perm_state_cannot">現在無法記錄：缺少「使用情況存取」。</string>
+    <string name="perm_state_can">現在可以記錄：</string>
+    <string name="perm_state_running">\n\n記錄服務正在執行。</string>
+    <string name="perm_state_rules">\n\n已排除 %1$d 個應用程式，其餘都會記錄。</string>
+
+    <!-- Shizuku（可选增强，只在装了它时才出现） -->
+    <string name="shizuku_not_installed">沒有安裝 Shizuku</string>
+    <string name="shizuku_not_running">Shizuku 沒有在執行，先開啟它把服務啟動起來</string>
+    <string name="shizuku_too_old">Shizuku 版本過舊（需要 v11 以上）</string>
+    <string name="shizuku_no_permission">還沒授予本應用程式 Shizuku 權限</string>
+    <string name="shizuku_ready">可用</string>
+
+    <!-- 设置：诊断（1.3.5） -->
+    <string name="settings_section_diag">診斷</string>
+    <string name="settings_errorlog">匯出錯誤日誌</string>
+    <string name="settings_errorlog_none">暫無可匯出內容</string>
+    <string name="settings_errorlog_n">%1$d 筆 · 最近 %2$s</string>
+    <string name="settings_errorlog_clear">清空錯誤日誌</string>
+    <string name="settings_errorlog_clear_title">清空錯誤日誌？</string>
+    <string name="settings_errorlog_clear_msg">共 %1$d 筆，最近 %2$s。\n\n清掉就匯不出來了，要留證據請先匯出。</string>
+    <string name="settings_errorlog_clear_ok">清空</string>
+    <string name="settings_errorlog_cleared">錯誤日誌已清空</string>
+    <string name="settings_errorlog_gate">目前沒有可匯出的內容 —— 應用程式還沒有記錄到任何問題</string>
+    <string name="settings_errorlog_failed">匯出失敗，沒能寫進「下載」目錄</string>
+
+    <!-- 1.3.5：原来这里是一整段「自动整理（接入模型）」的文案 ——
+         ai_title / ai_section_* / ai_provider* / ai_use_* / ai_base* /
+         ai_key* / ai_http_warning / ai_model* / ai_need_* / ai_test* /
+         ai_run_now / ai_queued / ai_off_hint / ai_log_empty，共 39 条。
+         需求把自动整理整块删掉，这些文案一并移除：留着它们只会让翻译
+         白翻一遍、让 lint 报一批无人引用，而它们在界面上永远不会出现。 -->
+
+    <!-- 缓存目录 -->
+    <string name="cache_title">快取目錄</string>
+    <string name="cache_section_usage">佔用情形</string>
+    <string name="cache_section_actions">清理</string>
+    <string name="cache_clear_all">清空全部快取</string>
+    <string name="cache_cleared_n">已清理 %1$d 項</string>
+    <string name="cache_note">快取放在應用程式專屬目錄下，不需要任何儲存權限；接上傳輸線或用檔案管理器都能自己查看和刪除，解除安裝應用程式時系統會一併清除。記錄本身在資料庫裡，與這裡無關。</string>
+
+    <!-- 导出：日期区间 -->
+    <string name="export_title">匯出 JSON</string>
+    <string name="export_range_label">匯出範圍</string>
+    <string name="export_range_today">當天</string>
+    <string name="export_range_week">本週</string>
+    <string name="export_range_month">本月</string>
+    <string name="export_range_year">本年</string>
+    <string name="export_range_all">全部日期</string>
+    <string name="export_range_custom">自訂日期區間</string>
+    <string name="export_field_from">開始</string>
+    <string name="export_field_to">結束</string>
+    <string name="export_files_label">附加檔案</string>
+    <string name="export_files_off">只匯出記錄，不帶附件</string>
+    <string name="export_files_on">把附件內容一起帶走（檔案會變大）</string>
+    <string name="export_files_note">預設只匯出記錄本身，附件留在本機。帶上附件後，匯入到其他機器時檔案也會一起回來。</string>
+    <string name="export_summary">將匯出 %1$d 筆記錄 · %2$s</string>
+    <string name="export_summary_files">將匯出 %1$d 筆記錄 · %2$s · 含 %3$d 個附件（%4$s）</string>
+    <string name="export_range_none">這個區間沒有記錄</string>
+    <string name="export_go">選擇儲存位置</string>
+    <string name="export_range_invalid">結束日期不能早於開始日期</string>
+    <string name="export_missing_title">有附件讀不到了</string>
+    <string name="export_missing_msg">這段區間裡有附件已經被移動或刪除，內容帶不走（登記資訊仍然會寫進檔案）。要繼續匯出嗎？</string>
+    <string name="export_missing_keep">繼續匯出</string>
+
+    <!-- 附件 -->
+    <string name="attach_section">附件</string>
+    <string name="attach_add">新增附件</string>
+    <string name="attach_hint">預設留在這台機器上，匯出時可以選擇是否一起帶走</string>
+    <string name="attach_way_title">這個附件要怎麼存</string>
+    <string name="attach_way_internal">存進應用程式內</string>
+    <string name="attach_way_reference">引用原始檔案</string>
+    <string name="attach_mode_internal">應用程式內</string>
+    <string name="attach_mode_reference">引用</string>
+    <string name="attach_failed">這個檔案讀不到，換一個試試</string>
+    <string name="attach_missing">檔案不在了</string>
+    <string name="attach_open_failed">打不開這個檔案，可能已經被移動或刪除</string>
+    <string name="attach_count">%1$d 個</string>
+    <string name="attach_delete_title">刪除這個附件？</string>
+    <string name="attach_delete_msg">%1$s\n\n存在應用程式內的檔案會一起刪掉；引用型只取消登記，不會動到原始檔案。</string>
+    <string name="attach_deleted">附件已刪除</string>
+
+    <!-- 删除事件时对附件的处理 -->
+    <string name="delete_attach_title">這筆記錄帶著附件</string>
+    <string name="delete_attach_msg">共 %1$d 個附件。要一起刪掉，還是留著以後在「附加檔案」裡查看？</string>
+    <string name="delete_attach_together">附件一起刪除</string>
+    <string name="delete_attach_keep">保留附件</string>
+    <string name="delete_attach_kept_hint">記錄已刪除，附件留在選單「附加檔案」裡</string>
+
+    <!-- 附带文件（孤立附件）页 -->
+    <string name="attach_page_title">附加檔案</string>
+    <string name="attach_page_empty">沒有需要單獨管理的附件</string>
+    <string name="attach_page_clear">清理全部</string>
+    <string name="attach_page_clear_title">刪除全部附加檔案？</string>
+    <string name="attach_page_clear_msg">共 %1$d 個檔案、%2$s。刪除後無法復原。</string>
+    <string name="attach_page_sweep">清掉沒登記的殘留檔案</string>
+    <string name="attach_page_swept">已清掉 %1$s</string>
+    <string name="attach_page_swept_none">沒有多餘的殘留檔案</string>
+    <string name="attach_page_open">開啟</string>
+    <string name="attach_page_total">應用程式內附件共 %1$d 個 · 佔用 %2$s</string>
+    <string name="attach_external_note">其中 %1$d 個是「引用原始檔案」：檔案還在手機上的原來位置，應用程式只記了一個位址，佔用空間為 0。</string>
+
+    <!-- 备份 -->
+    <string name="backup_title">備份與還原</string>
+    <string name="backup_local_title">本機備份</string>
+    <string name="backup_local_desc">每次匯出會自動留一份本機備份，最多保留 12 份。</string>
+    <string name="backup_export">匯出到檔案</string>
+    <string name="backup_import">從檔案匯入</string>
+    <string name="backup_now">立即備份</string>
+    <string name="backup_now_done">已在本機留了一份備份</string>
+    <string name="backup_restore">還原</string>
+    <string name="backup_delete">刪除</string>
+    <string name="backup_restore_hint">點一行即還原該備份 · 右側刪除</string>
+    <string name="backup_none">還沒有本機備份</string>
+    <string name="backup_restore_title">還原這份備份？</string>
+    <string name="backup_restore_msg">將用備份中的記錄覆蓋目前全部記錄。還原前會自動留一份目前資料的備份。</string>
+    <string name="backup_delete_title">刪除這份備份？</string>
+    <string name="backup_done">已匯出</string>
+    <string name="export_nothing">還沒有記錄可以匯出</string>
+    <string name="export_where_title">匯出到哪裡</string>
+    <string name="export_where_msg">目前共 %1$d 筆記錄。存到系統「下載」目錄最省事，也可以自己挑位置。</string>
+    <string name="export_where_download">存到下載目錄</string>
+    <string name="export_where_pick">自己挑位置</string>
+    <string name="export_saved_to">已儲存到 %1$s</string>
+    <string name="export_need_permission">沒有儲存權限，改成自己挑位置儲存</string>
+    <string name="export_retry_title">這個位置寫不進去</string>
+    <string name="export_retry_msg">檔案內容已經在本機存好了，只是沒能寫到你選的位置。可以換一個位置再存一次嗎？</string>
+    <string name="export_retry_yes">換個位置</string>
+    <string name="export_retry_keep">稍後再說</string>
+    <string name="export_pending_title">上次的匯出還沒存完</string>
+    <string name="export_pending_msg">內容已經在本機存好了。系統中斷了那次儲存，現在補存到檔案裡？</string>
+    <string name="export_pending_save">現在補存</string>
+    <string name="export_pending_discard">不要了</string>
+    <string name="backup_export_failed">匯出失敗</string>
+    <string name="backup_import_failed">匯入失敗，檔案格式無法辨識</string>
+    <string name="backup_import_title">匯入這些記錄？</string>
+    <string name="import_mode_merge">合併（跳過重複）</string>
+    <string name="import_mode_append">全部追加</string>
+    <string name="import_mode_replace">清空後匯入</string>
+    <string name="backup_summary">共 %1$d 筆 · %2$s</string>
+    <string name="backup_imported">已匯入 %1$d 筆</string>
+    <string name="import_files_registered_only">有 %1$d 個附件只帶回了登記資訊（匯出時沒勾「把附件內容一起帶走」），檔案仍在原來那台裝置上</string>
+
+    <!-- 记录来源小标（混排时用来区分自动记录与手动记录） -->
+    <string name="source_auto">自動</string>
+    <string name="source_screen">螢幕</string>
+
+    <!-- 自动记录 / 无障碍 -->
+    <!-- 无障碍相关的字符串已于 1.3 随服务一并移除。
+         真机（OriginOS 6 / Android 16）上该服务会被系统反复回收，
+         而自动记录不依赖它也能完整工作。 -->
+
+    <!-- 权限引导页 -->
+    <string name="perm_title">權限與常駐</string>
+    <string name="perm_section_state">目前狀態</string>
+    <string name="perm_usage">使用情況存取</string>
+    <string name="perm_notify">通知</string>
+    <string name="perm_battery">電池最佳化白名單</string>
+    <string name="perm_autostart">自動啟動</string>
+    <string name="perm_autostart_fallback">沒找到本機系統的自動啟動頁，已開啟替代入口，請按下方說明尋找</string>
+    <string name="perm_autostart_note_done">已按上面的頁面設定過。這一項系統沒有介面、應用程式查不到實際狀態，所以這個「已開啟」是你操作過的記錄，不是系統讀數：如果後來在系統裡關掉了，再點一次這一行就能取消標記。\n新裝的機器上，廠商的自動啟動名單可能要重新啟動一次才會收錄本應用程式。\n其實這一步不做也不影響記錄 —— 它只關係「開機後能不能自動接著記」。</string>
+    <string name="perm_autostart_note_vendor">已開啟「%1$s」。翻到本應用程式（清單按應用程式名稱排序），把它的「開機啟動 / 背景啟動」都打開。</string>
+    <string name="perm_autostart_note_manager">沒找到本機系統的自動啟動頁，已開啟廠商的權限管理應用程式。在裡面找「自動啟動 / 背景啟動 / 開機啟動」這一類字眼。</string>
+    <string name="perm_autostart_note_detail">沒找到本機系統的自動啟動頁，已開啟應用程式詳細資料。這一台機器可能沒有獨立的自動啟動開關（部分 ROM 把它併進了電池或背景管理）。</string>
+    <string name="perm_autostart_unmarked">已取消標記，可以重新設定一次</string>
+
+    <!-- 权限页：Shizuku（仅当本机装了 Shizuku 才显示这一段）。
+         标题写成「实验性功能」而不是「Shizuku」：这一段是可选增强，
+         而且依赖第三方应用与它的授权状态，随时可能不可用 ——
+         把它当正式功能摆出来，用户会以为缺了它应用就不完整。 -->
+    <string name="perm_section_shizuku">實驗性功能</string>
+    <string name="perm_shizuku">Shizuku</string>
+    <string name="perm_shizuku_granted">已取得 Shizuku 權限</string>
+    <string name="perm_shizuku_denied">沒有授予 Shizuku 權限</string>
+    <string name="perm_shizuku_request_failed">沒能發起授權申請，先去 Shizuku 應用程式裡把服務啟動起來</string>
+    <string name="perm_shizuku_not_ready">Shizuku 還無法使用</string>
+    <string name="perm_usage_already">「使用情況存取」已經有了</string>
+    <string name="perm_usage_granted">已透過 Shizuku 開啟「使用情況存取」</string>
+    <string name="perm_usage_grant_failed">Shizuku 沒能開啟它，請按上面的入口手動開啟</string>
+
+    <!-- 应用名单页 -->
+    <string name="rules_title">應用程式名單</string>
+    <string name="rules_search">搜尋應用程式名稱或套件名稱</string>
+    <string name="rules_exclude">排除</string>
+    <string name="rules_no_match">沒有符合的應用程式</string>
+    <!-- 全部已安装应用有好几百个（含系统组件），一次全铺出来会卡，所以分页。
+         %1$d 是当前搜索词下还没渲染出来的条数 -->
+    <string name="rules_show_more">顯示更多（還有 %1$d 個）</string>
+
+    <!-- 关于 -->
+    <string name="about_title">關於</string>
+    <string name="about_version">版本 %1$s（%2$d）</string>
+    <string name="about_pkg">套件名稱 %1$s</string>
+</resources>

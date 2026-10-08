@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 柔和低饱和的浅色纸张系 -->
+    <color name="paper">#FFFBFAF8</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="ink">#FF23272A</color>
+    <color name="ink_soft">#FF6E7478</color>
+    <color name="ink_faint">#FFA8ADAF</color>
+    <color name="divider">#FFEAEBE8</color>
+    <color name="divider_soft">#FFF1F2EF</color>
+    <color name="primary">#FF5F8978</color>
+    <color name="primary_soft">#FFE8EFEB</color>
+    <color name="primary_pressed">#FFD6E2DC</color>
+    <color name="line">#FFDDDEDA</color>
+    <color name="today">#FFF0F4F1</color>
+    <color name="ripple_soft">#146E7478</color>
+    <color name="attach_tint">#FFB9C4BE</color>
+    <!-- 空态插图的描边；深色下要提亮（见 values-night） -->
+    <color name="empty_stroke">#FFD8DAD5</color>
+    <!-- 「自动 / 屏幕」来源小标 -->
+    <color name="source_tag_bg">#FFEFF3F0</color>
+    <color name="source_tag_line">#FFDCE3DE</color>
+    <!-- 提示/警示强调色（应用名单的「排除」标记等） -->
+    <color name="warn">#FFC2762A</color>
+</resources>

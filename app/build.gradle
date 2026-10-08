@@ -1,0 +1,156 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.MATO.log'
+    compileSdk 34
+    buildToolsVersion '34.0.0'
+
+    defaultConfig {
+        // 正式包名。1.3 转正时从 com.MATO.log.beta 改回这里 —— 签名库没换过，
+        // 所以对已经装着 1.2.3 的机器来说这是一次原地升级，数据库与附件都留在原地。
+        // 代码包名（namespace）一直是 com.MATO.log，源文件、import、R 引用都不用动。
+        applicationId 'com.MATO.log'
+        minSdk 24
+        targetSdk 34
+        // 版本号：**1.0.0 是公开线起点，versionCode 100。**
+        //
+        // 2026-10-08 的重新起算：此前 1.0 ~ 1.3.5（versionCode 100~135）全部
+        // 定性为**内测版**，那条线用旧密钥签名（密钥路径与口令见 交接说明.md 第 1 节），
+        // 已封存不再维护。
+        // 公开线换了一把新密钥（口令见仓库外一层的 gradle.properties），
+        // **一次重新起算**，所以这里从 100 重新开始。
+        //
+        // ⚠️ 换密钥的直接后果：**与内测版签名不同，无法覆盖安装**。
+        //    内测机器升级要「先导出 JSON → 卸载 → 装新包 → 导入」。
+        //    版本号因此不会倒退冲突 —— 覆盖安装本来就做不到，才敢重新起算。
+        versionCode 100
+        versionName '1.0.0'
+        // 只打包用得到的语言资源。**加语言时这里必须跟着加** ——
+        // resConfigs 是白名单，漏掉的语言会被 aapt 直接剔掉，
+        // 表现是「设置里选了某语言，界面纹丝不动」，而且不会报任何错。
+        //
+        // 实测教训：只写 'zh' **不覆盖** values-zh-rTW。原以为语言码会带上它的
+        // 全部地区变体，出包后用 aapt2 dump resources 一数，包里只有
+        // 默认(480) / en(302) / ja(302) / ko(302)，zh-rTW 一条都没有。
+        // 地区变体必须显式列出来。
+        resConfigs 'zh', 'zh-rTW', 'en', 'ja', 'ko'
+    }
+
+    /**
+     * 应用内语言切换（1.3.5）要求**所有**语言的资源都在包里。
+     *
+     * <p>若哪天改用 App Bundle 分发，Google Play 会按用户系统语言拆包，
+     * 只下发系统语言那几份 —— 那时用户在应用里挑一门他系统里没有的语言，
+     * 界面会**纹丝不动**：资源的语言限定符匹配不上，就静默回退到默认那份。
+     * 这个故障不报错、也不崩，只是「选了没反应」，极难查。
+     *
+     * <p>所以这里显式关掉语言拆分。对现在的 APK 分发没有任何影响
+     * （APK 本来就整包下发），纯粹是给将来留的一道保险。
+     * lint 的 AppBundleLocaleChanges 报的就是这件事。
+     */
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    signingConfigs {
+        release {
+            // 公开线的签名库（2026-10-08 换的新密钥；内测线那把旧库里已封存，
+            // 见工作区外的 _清理前备份_20261008\MATOkey-旧密钥-内测线-*.jks）
+            storeFile file('../MATOkey.jks')
+
+            // ★ 口令**不写在这里**：这个文件是要入库的。
+            //
+            // 口令放在工程**上两级**的 gradle.properties
+            // （MATOlog\ 的上一级，也就是整个仓库之外），
+            // 所以这里是 ../../ 而不是 ../ —— 少一层就会指到仓库根目录去，
+            // 表现是「文件不存在 → 口令为 null → packageRelease 报
+            // SigningConfig is missing required property "storePassword"」。
+            //
+            // 注意：Gradle 也不会自动读取任意上级目录的同名文件 ——
+            // 它只往上找到 gradle user home 为止，所以这里**显式读**，
+            // 也顺便让「口令从哪来」在这份入库的文件里看得见。
+            //
+            // 换密钥时只改那个文件，不用动这里的任何一行。
+            def creds = new Properties()
+            def credsFile = rootProject.file('../../gradle.properties')
+            if (credsFile.exists()) {
+                credsFile.withInputStream { creds.load(it) }
+            }
+            storePassword creds.getProperty('MATO_STORE_PASSWORD')
+            keyAlias creds.getProperty('MATO_KEY_ALIAS') ?: 'MATOkey'
+            keyPassword creds.getProperty('MATO_KEY_PASSWORD')
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 调试包加 .debug 后缀（com.MATO.log.debug），与正式包同机并存，
+            // 方便对同一批数据做对照，也能用 run-as 挖它的私有目录
+            applicationIdSuffix '.debug'
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig false
+        resValues false
+        shaders false
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        resources.excludes += ['META-INF/*']
+    }
+}
+
+dependencies {
+    // Shizuku：可选增强，用来在用户已经装好并启用 Shizuku 时，免手动去系统设置里
+    // 逐项授权（最有用的是「使用情况访问」）。
+    //
+    // 说明为什么这不违背「零依赖」：编译产物会打进包里，但**运行时不依赖 Shizuku**——
+    // 没装或没启用时所有调用都返回「不可用」，功能完整退化到手动授权那条路径。
+    // 用户不装 Shizuku，就等于没引它。
+    //
+    // 版本：13.1.5 是 13.x 线最后一版。选它是因为 aidl 包提供的是**预编译 Stub 类**
+    // 而不是 .aidl 源文件，所以不需要额外接 aidl 编译工具链。
+    //
+    // 关于依赖取舍：
+    //   provider 用 implementation（类要打进包里，运行时由 Shizuku 回调）；
+    //   api 用 compileOnly —— 它只被我们的代码引用，而 provider 会把 api 作为
+    //   传递依赖带进来，运行时类照样在。
+    //
+    // androidx.annotation 是**必须留着**的：api 的字节码里引用了
+    // androidx.annotation.RestrictTo（用来标"库内部使用"），排掉之后 javac 会报
+    // 「找不到 RestrictTo$Scope 的类文件」而编译失败。
+    // 它只含注解、体积极小、不进 UI 体系 —— 工程仍然是全系统原生控件。
+    implementation 'dev.rikka.shizuku:provider:13.1.5'
+    compileOnly 'dev.rikka.shizuku:api:13.1.5'
+    // Shizuku 的 POM 把 androidx.annotation 声明成 runtime 作用域，编译期拿不到，
+    // 而 api 的字节码里引用了 RestrictTo，所以这里显式补一条 compileOnly。
+    // 版本必须跟运行时那条路保持一致（1.3.0），否则 Gradle 会因为版本约束冲突而拒绝解析。
+    // 它只含注解，不参与 UI，也不改变「全系统原生控件」这一点。
+    compileOnly 'androidx.annotation:annotation:1.3.0'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

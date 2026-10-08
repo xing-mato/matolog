@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 空态插图。描边颜色改走资源名，深色下才能提亮，否则整块看不见。
+     形状与尺寸保持原样，只换颜色引用。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:strokeColor="@color/empty_stroke"
+        android:strokeWidth="1.4"
+        android:fillColor="#00000000"
+        android:pathData="M17,14 L39,14 L39,42 L17,42 Z" />
+    <path
+        android:strokeColor="@color/empty_stroke"
+        android:strokeWidth="1.4"
+        android:fillColor="#00000000"
+        android:pathData="M22,22 L34,22 M22,28 L34,28 M22,34 L29,34" />
+</vector>

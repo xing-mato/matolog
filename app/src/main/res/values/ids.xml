@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 挂在视图上的辅助数据 -->
+    <item name="tag_day" type="id" />
+    <item name="tag_kind" type="id" />
+</resources>

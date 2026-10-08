@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MATOlog</string>
+    <string name="tagline">事件記録</string>
+
+    <!-- 开屏 -->
+    <string name="splash_sub">やることは三つ：記録する、見返す、持ち出す</string>
+
+    <!-- 检索跨度 -->
+    <string name="level_day">日</string>
+    <string name="level_month">月</string>
+    <string name="level_year">年</string>
+    <string name="ctx_year_scope">年表示</string>
+    <string name="nav_prev">前へ</string>
+    <string name="nav_next">次へ</string>
+
+    <!-- 主页关键词检索（1.3.5） -->
+    <string name="search_title">検索</string>
+    <string name="search_hint">説明またはアプリ名で検索</string>
+    <string name="search_empty_hint">キーワードを入力して、すべての記録から探します。</string>
+    <string name="search_no_result">「%1$s」を含む記録は見つかりませんでした</string>
+    <string name="search_count">%1$d 件見つかりました</string>
+    <string name="search_capped">最近の %1$d 件のみ表示しています。より具体的なキーワードにすると、より広く確認できます。</string>
+
+    <string name="action_add">新規</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_delete">削除</string>
+    <string name="action_edit">編集</string>
+    <string name="action_back">戻る</string>
+    <string name="action_more">その他</string>
+    <string name="action_ok">OK</string>
+
+    <!-- 安全层：应用锁 -->
+    <string name="lock_setup_title">アプリロックを設定</string>
+    <string name="lock_setup_msg">記録に 4〜6 桁の数字パスコードをかけます。パスコードはソルト付きハッシュとして本機にのみ保存され、忘れると復元できませんが、データは残ります。</string>
+    <string name="lock_confirm_title">もう一度入力してください</string>
+    <string name="lock_verify_title">パスコードを入力</string>
+    <string name="lock_wrong">パスコードが違います</string>
+    <string name="lock_skip">今は設定しない</string>
+    <string name="lock_skipped">スキップしました。メニューからいつでも設定できます</string>
+    <string name="lock_mismatch">2 回の入力が一致しません</string>
+    <string name="passcode_hint">パスコード</string>
+    <string name="passcode_too_short">パスコードは 4 桁以上にしてください</string>
+    <string name="passcode_enabled">アプリロックを有効にしました</string>
+
+    <!-- 安全层：加密导出 -->
+    <string name="export_encrypt_label">暗号化</string>
+    <string name="export_encrypt_on">このファイルを暗号化する</string>
+    <string name="export_encrypt_off">暗号化しない（平文 JSON）</string>
+    <string name="import_passcode_title">これは旧バージョンの暗号化エクスポートです</string>
+    <string name="import_passcode_msg">1.3 以前の暗号化ファイルは鍵をパスコードに結び付けているため、当時エクスポート時に設定した合言葉の入力が必要です。1.3.1 以降はパスコード不要です。</string>
+    <string name="import_passcode_wrong">パスコードが違います（このファイルは 1.3 以前のもので、当時の合言葉が必要です）</string>
+    <string name="import_corrupt">この暗号化ファイルは破損しているか改変されているため、解読できません</string>
+
+    <!-- 编辑界面 -->
+    <string name="edit_title_new">記録を新規作成</string>
+    <string name="edit_title_edit">記録を編集</string>
+    <string name="edit_time_label">時刻</string>
+    <string name="edit_time_hint">タップして変更</string>
+    <string name="edit_desc_label">説明</string>
+    <string name="edit_desc_hint">何があったか書き留める…</string>
+    <string name="edit_empty_warning">まだ内容がありません</string>
+    <string name="edit_saved">保存しました</string>
+    <string name="edit_deleted">削除しました</string>
+    <string name="delete_confirm_title">この記録を削除しますか</string>
+
+    <!-- 列表 / 空态 -->
+    <string name="empty_day">この日の記録はまだありません</string>
+    <string name="empty_month">この月の記録はまだありません</string>
+    <string name="empty_year">この年の記録はまだありません</string>
+    <string name="empty_hint">右下の「新規」をタップして 1 件記録しましょう</string>
+    <string name="count_unit">件</string>
+    <string name="count_none">—</string>
+    <string name="hint_tap_day">日をタップ → その日の記録をすべて表示</string>
+    <string name="hint_tap_month">月をタップ → その月のカレンダーを表示</string>
+
+    <!-- 菜单 -->
+    <string name="menu_export">JSON をエクスポート</string>
+    <string name="menu_import">JSON をインポート</string>
+    <string name="menu_backup">バックアップと復元</string>
+    <string name="menu_attachments">添付ファイル</string>
+    <string name="menu_settings">設定</string>
+    <string name="menu_about">このアプリについて</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">設定</string>
+    <string name="settings_section_look">外観</string>
+    <string name="settings_dark">ダークモード</string>
+
+    <!-- 设置：自动记录 -->
+    <string name="settings_section_record">自動記録</string>
+    <string name="settings_section_more">リストと権限</string>
+    <string name="settings_auto_record">自動記録</string>
+    <string name="settings_on">オン</string>
+    <string name="settings_off">オフ</string>
+    <string name="settings_interval">サンプリング間隔</string>
+    <string name="settings_interval_msg">どのくらいの間隔で前面のアプリを確認するか。短いほど常駐通知が追従し、区切りの境界も正確になりますが、その分だけ電池を消費します。秒数で入力、既定は 5。画面オフ中は自動的に遅くなります。</string>
+    <string name="settings_min_keep">これより短いものは記録しない</string>
+    <string name="settings_min_keep_msg">短すぎる断片はノイズになります。既定は 5 分です。0 を入力するとすべて記録します（しきい値なし）。</string>
+    <string name="settings_min_keep_all">すべて記録</string>
+    <!-- 自定义分钟输入：单位、范围提示、0 的特殊含义 -->
+    <string name="settings_minutes_unit">分</string>
+    <string name="settings_seconds_unit">秒</string>
+    <string name="settings_minutes_range">%1$d から %2$d までの整数を入力してください</string>
+    <string name="settings_seconds_range">%1$d から %2$d 秒までの整数を入力してください</string>
+    <string name="settings_min_keep_zero_hint">0 を入力するとすべて記録し、どんなに短い断片もタイムラインに残ります。</string>
+    <string name="settings_record_no_perm">自動記録はオンですが、「使用状況へのアクセス」権限がないため、まだ記録できません。下の「権限と常駐対策」から許可してください。</string>
+    <string name="settings_record_started">記録を開始しました</string>
+    <string name="settings_record_stopped">記録を停止しました</string>
+    <string name="settings_need_perm_title">権限があと一つ足りません</string>
+    <string name="settings_need_perm_msg">自動記録には、前面にあるのがどのアプリかを知るために「使用状況へのアクセス」が必要です。これがないと、オンにしても何も記録されません —— まずはこれを許可してください。</string>
+    <string name="settings_go_grant">許可する</string>
+
+    <!-- 设置：名单与权限 -->
+    <string name="settings_rules">アプリリスト</string>
+    <string name="settings_rules_none">未設定</string>    <string name="settings_perm">権限と常駐対策</string>
+    <string name="settings_perm_ok">準備完了</string>
+    <string name="settings_perm_need">権限不足</string>
+
+    <!-- 设置：数据与缓存 -->
+    <string name="settings_section_data">データとキャッシュ</string>
+    <string name="settings_cache">キャッシュディレクトリ</string>
+
+    <!-- 外观：语言（1.3.5） -->
+    <string name="settings_lang">言語</string>
+    <string name="lang_follow">システムに従う</string>
+    <string name="lang_zh_cn">简体中文</string>
+    <string name="lang_zh_tw">繁體中文</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국어</string>
+    <string name="lang_en">English</string>
+
+    <!-- 深色档位 -->
+    <string name="dark_follow">システムに従う</string>
+    <string name="dark_on">常にダーク</string>
+    <string name="dark_off">常にライト</string>
+
+    <!-- 自动记录：状态行与常驻通知 -->
+    <string name="rec_note_no_foreground">前面にアプリはありません</string>
+    <string name="rec_note_self">本アプリ自身のため対象外</string>
+    <string name="rec_note_shell">システム UI のため記録しません</string>
+    <string name="rec_note_excluded">除外リストにあります</string>
+    <string name="rec_note_recording">記録中</string>
+    <string name="rec_note_screen_off">画面はオフです</string>
+    <string name="rec_note_no_perm">「使用状況へのアクセス」権限がなく、前面のアプリを取得できません</string>
+    <string name="rec_note_nothing">画面は点いていますが、記録できる前面のアプリがありません</string>
+    <string name="rec_note_waiting">前面のアプリを待機中</string>
+    <string name="rec_note_no_perm_short">使用状況へのアクセス権限がありません</string>
+    <string name="rec_note_sample_error">サンプリングエラー：%1$s</string>
+    <string name="rec_preparing_title">記録を準備しています</string>
+    <string name="rec_preparing_text">前面のアプリを読み取り、イベント記録を作成します</string>
+    <string name="rec_recording_title">記録中</string>
+    <string name="rec_no_noti_perm">システム設定で本アプリの通知を許可してください</string>
+    <string name="rec_inactive_title">記録が有効になっていません</string>
+    <string name="rec_inactive_text">「使用状況へのアクセス」権限がありません。タップして設定へ</string>
+    <string name="rec_waiting_title">記録中 · 前面のアプリを待機</string>
+    <string name="rec_now_title">記録中 · %1$s</string>
+    <string name="rec_noti_text">%1$s 継続 · 今日 %2$d 件</string>
+    <string name="rec_action_refresh">更新</string>
+    <string name="rec_action_stop">停止</string>
+    <string name="rec_channel_name">自動記録</string>
+    <string name="rec_channel_desc">記録中に表示される常駐通知です。ここから更新または停止できます</string>
+
+    <!-- 设置页里那些「当前值」 -->
+    <string name="settings_rules_n">%1$d 件を除外中</string>
+    <string name="settings_interval_sec">%1$d 秒ごと</string>
+    <string name="settings_interval_min">%1$d 分ごと</string>
+    <string name="settings_interval_note">%1$sに前面のアプリを確認します。区切りの境界は最大でこれだけ遅れます。</string>
+    <string name="settings_min_keep_n">%1$d 分未満</string>
+
+    <!-- 名单页的汇总 -->
+    <string name="rules_summary_some">%1$d 個のアプリを除外中（先頭に表示）。それ以外はすべて記録されます。</string>
+    <string name="rules_summary_none">除外しているアプリはありません。本アプリ自身とシステム UI を除き、すべて記録されます。</string>
+
+    <!-- 缓存页 -->
+    <string name="cache_tmp_label">一時ファイル：%1$s</string>
+    <string name="cache_total">合計 %1$s。</string>
+    <string name="cache_usage_note">これらはすべて中間ファイルです。削除しても記録済みのイベントには影響せず、設定にも影響しません。</string>
+
+    <!-- 附件存法（长文案）。短标签另有 attach_mode_internal / attach_mode_reference -->
+    <string name="attach_mode_internal_long">アプリ内に保存</string>
+    <string name="attach_mode_reference_long">元のファイルを参照</string>
+
+    <!-- 导出落点 -->
+    <string name="export_downloads_prefix">ダウンロード/%1$s</string>
+
+    <!-- 权限页的状态说明 -->
+    <string name="perm_mark_on">オン</string>
+    <string name="perm_mark_go">オンにする</string>
+    <string name="perm_state_cannot">現在は記録できません：「使用状況へのアクセス」がありません。</string>
+    <string name="perm_state_can">現在は記録できます：</string>
+    <string name="perm_state_running">\n\n記録サービスが動作しています。</string>
+    <string name="perm_state_rules">\n\n%1$d 個のアプリを除外中で、それ以外はすべて記録されます。</string>
+
+    <!-- Shizuku（可选增强，只在装了它时才出现） -->
+    <string name="shizuku_not_installed">Shizuku がインストールされていません</string>
+    <string name="shizuku_not_running">Shizuku が動作していません。まず Shizuku を開いてサービスを起動してください</string>
+    <string name="shizuku_too_old">Shizuku のバージョンが古すぎます（v11 以上が必要）</string>
+    <string name="shizuku_no_permission">本アプリに Shizuku の権限がまだ許可されていません</string>
+    <string name="shizuku_ready">利用可能</string>
+
+    <!-- 设置：诊断（1.3.5） -->
+    <string name="settings_section_diag">診断</string>
+    <string name="settings_errorlog">エラーログをエクスポート</string>
+    <string name="settings_errorlog_none">エクスポートできる内容はありません</string>
+    <string name="settings_errorlog_n">%1$d 件 · 最新 %2$s</string>
+    <string name="settings_errorlog_clear">エラーログを消去</string>
+    <string name="settings_errorlog_clear_title">エラーログを消去しますか</string>
+    <string name="settings_errorlog_clear_msg">全 %1$d 件、最新 %2$s。\n\n消去するとエクスポートできなくなります。証拠として残すなら先にエクスポートしてください。</string>
+    <string name="settings_errorlog_clear_ok">消去</string>
+    <string name="settings_errorlog_cleared">エラーログを消去しました</string>
+    <string name="settings_errorlog_gate">現在エクスポートできる内容はありません —— アプリはまだ問題を記録していません</string>
+    <string name="settings_errorlog_failed">エクスポートに失敗し、「ダウンロード」ディレクトリに書き込めませんでした</string>
+
+    <!-- 1.3.5：原来这里是一整段「自动整理（接入模型）」的文案 ——
+         ai_title / ai_section_* / ai_provider* / ai_use_* / ai_base* /
+         ai_key* / ai_http_warning / ai_model* / ai_need_* / ai_test* /
+         ai_run_now / ai_queued / ai_off_hint / ai_log_empty，共 39 条。
+         需求把自动整理整块删掉，这些文案一并移除：留着它们只会让翻译
+         白翻一遍、让 lint 报一批无人引用，而它们在界面上永远不会出现。 -->
+
+    <!-- 缓存目录 -->
+    <string name="cache_title">キャッシュディレクトリ</string>
+    <string name="cache_section_usage">使用状況</string>
+    <string name="cache_section_actions">クリーンアップ</string>
+    <string name="cache_clear_all">キャッシュをすべて消去</string>
+    <string name="cache_cleared_n">%1$d 件を削除しました</string>
+    <string name="cache_note">キャッシュはアプリ専用ディレクトリに置かれるため、ストレージ権限は不要です。ケーブルを挿すかファイルマネージャーから自分で確認・削除でき、アプリをアンインストールするとシステムがまとめて消去します。記録そのものはデータベースにあり、こことは関係ありません。</string>
+
+    <!-- 导出：日期区间 -->
+    <string name="export_title">JSON をエクスポート</string>
+    <string name="export_range_label">エクスポート範囲</string>
+    <string name="export_range_today">当日</string>
+    <string name="export_range_week">今週</string>
+    <string name="export_range_month">今月</string>
+    <string name="export_range_year">今年</string>
+    <string name="export_range_all">すべての期間</string>
+    <string name="export_range_custom">期間を指定</string>
+    <string name="export_field_from">開始</string>
+    <string name="export_field_to">終了</string>
+    <string name="export_files_label">添付ファイル</string>
+    <string name="export_files_off">記録のみをエクスポートし、添付は含めない</string>
+    <string name="export_files_on">添付の内容も一緒に持ち出す（ファイルサイズが大きくなります）</string>
+    <string name="export_files_note">既定では記録そのものだけをエクスポートし、添付は本機に残します。添付を含めると、他の端末へインポートしたときにファイルも一緒に戻ります。</string>
+    <string name="export_summary">%1$d 件の記録をエクスポート · %2$s</string>
+    <string name="export_summary_files">%1$d 件の記録をエクスポート · %2$s · 添付 %3$d 個を含む（%4$s）</string>
+    <string name="export_range_none">この期間には記録がありません</string>
+    <string name="export_go">保存先を選択</string>
+    <string name="export_range_invalid">終了日は開始日より前にできません</string>
+    <string name="export_missing_title">読み取れない添付があります</string>
+    <string name="export_missing_msg">この期間には、移動または削除された添付があり、内容を持ち出せません（登録情報はファイルに書き込まれます）。エクスポートを続けますか。</string>
+    <string name="export_missing_keep">エクスポートを続ける</string>
+
+    <!-- 附件 -->
+    <string name="attach_section">添付</string>
+    <string name="attach_add">添付を追加</string>
+    <string name="attach_hint">既定ではこの端末に残り、エクスポート時に一緒に持ち出すか選べます</string>
+    <string name="attach_way_title">この添付の保存方法</string>
+    <string name="attach_way_internal">アプリ内に保存</string>
+    <string name="attach_way_reference">元のファイルを参照</string>
+    <string name="attach_mode_internal">アプリ内</string>
+    <string name="attach_mode_reference">参照</string>
+    <string name="attach_failed">このファイルは読み取れません。別のものを試してください</string>
+    <string name="attach_missing">ファイルがありません</string>
+    <string name="attach_open_failed">このファイルを開けません。移動または削除された可能性があります</string>
+    <string name="attach_count">%1$d 個</string>
+    <string name="attach_delete_title">この添付を削除しますか</string>
+    <string name="attach_delete_msg">%1$s\n\nアプリ内に保存したファイルは一緒に削除されます。参照型は登録を解除するだけで、元のファイルには触れません。</string>
+    <string name="attach_deleted">添付を削除しました</string>
+
+    <!-- 删除事件时对附件的处理 -->
+    <string name="delete_attach_title">この記録には添付があります</string>
+    <string name="delete_attach_msg">添付は %1$d 個です。一緒に削除しますか、それとも残して後で「添付ファイル」から確認しますか。</string>
+    <string name="delete_attach_together">添付も一緒に削除</string>
+    <string name="delete_attach_keep">添付を残す</string>
+    <string name="delete_attach_kept_hint">記録を削除しました。添付はメニューの「添付ファイル」に残っています</string>
+
+    <!-- 附带文件（孤立附件）页 -->
+    <string name="attach_page_title">添付ファイル</string>
+    <string name="attach_page_empty">個別に管理する必要のある添付はありません</string>
+    <string name="attach_page_clear">すべて削除</string>
+    <string name="attach_page_clear_title">添付ファイルをすべて削除しますか</string>
+    <string name="attach_page_clear_msg">全 %1$d 個のファイル、%2$s。削除すると元に戻せません。</string>
+    <string name="attach_page_sweep">登録のない残存ファイルを削除</string>
+    <string name="attach_page_swept">%1$s を削除しました</string>
+    <string name="attach_page_swept_none">余分な残存ファイルはありません</string>
+    <string name="attach_page_open">開く</string>
+    <string name="attach_page_total">アプリ内の添付は全 %1$d 個 · 使用容量 %2$s</string>
+    <string name="attach_external_note">うち %1$d 個は「元のファイルを参照」です。ファイルは端末上の元の場所にあり、アプリは場所だけを記録しているため、使用容量は 0 です。</string>
+
+    <!-- 备份 -->
+    <string name="backup_title">バックアップと復元</string>
+    <string name="backup_local_title">本機バックアップ</string>
+    <string name="backup_local_desc">エクスポートのたびに本機バックアップを自動で 1 件残し、最大 12 件まで保持します。</string>
+    <string name="backup_export">ファイルへエクスポート</string>
+    <string name="backup_import">ファイルからインポート</string>
+    <string name="backup_now">今すぐバックアップ</string>
+    <string name="backup_now_done">本機にバックアップを 1 件残しました</string>
+    <string name="backup_restore">復元</string>
+    <string name="backup_delete">削除</string>
+    <string name="backup_restore_hint">行をタップするとそのバックアップを復元 · 右側は削除</string>
+    <string name="backup_none">本機バックアップはまだありません</string>
+    <string name="backup_restore_title">このバックアップを復元しますか</string>
+    <string name="backup_restore_msg">バックアップ内の記録で現在のすべての記録を上書きします。復元の前に、現在のデータのバックアップを自動で 1 件残します。</string>
+    <string name="backup_delete_title">このバックアップを削除しますか</string>
+    <string name="backup_done">エクスポートしました</string>
+    <string name="export_nothing">エクスポートできる記録はまだありません</string>
+    <string name="export_where_title">エクスポート先</string>
+    <string name="export_where_msg">現在 全 %1$d 件の記録があります。システムの「ダウンロード」ディレクトリに保存するのが一番簡単ですし、場所を自分で選ぶこともできます。</string>
+    <string name="export_where_download">ダウンロードディレクトリに保存</string>
+    <string name="export_where_pick">場所を自分で選ぶ</string>
+    <string name="export_saved_to">%1$s に保存しました</string>
+    <string name="export_need_permission">ストレージ権限がないため、場所を自分で選んで保存します</string>
+    <string name="export_retry_title">この場所には書き込めません</string>
+    <string name="export_retry_msg">ファイルの内容は本機に保存済みで、選んだ場所に書き込めなかっただけです。別の場所にもう一度保存しますか。</string>
+    <string name="export_retry_yes">別の場所にする</string>
+    <string name="export_retry_keep">後で</string>
+    <string name="export_pending_title">前回のエクスポートがまだ保存し終わっていません</string>
+    <string name="export_pending_msg">内容は本機に保存済みです。システムが前回の保存を中断したので、今からファイルへ保存し直しますか。</string>
+    <string name="export_pending_save">今すぐ保存する</string>
+    <string name="export_pending_discard">破棄する</string>
+    <string name="backup_export_failed">エクスポートに失敗しました</string>
+    <string name="backup_import_failed">インポートに失敗しました。ファイル形式を判別できません</string>
+    <string name="backup_import_title">これらの記録をインポートしますか</string>
+    <string name="import_mode_merge">マージ（重複をスキップ）</string>
+    <string name="import_mode_append">すべて追加</string>
+    <string name="import_mode_replace">消去してからインポート</string>
+    <string name="backup_summary">全 %1$d 件 · %2$s</string>
+    <string name="backup_imported">%1$d 件をインポートしました</string>
+    <string name="import_files_registered_only">%1$d 個の添付は登録情報だけが戻りました（エクスポート時に「添付の内容も一緒に持ち出す」がオフでした）。ファイルは元の端末にあります</string>
+
+    <!-- 记录来源小标（混排时用来区分自动记录与手动记录） -->
+    <string name="source_auto">自動</string>
+    <string name="source_screen">画面</string>
+
+    <!-- 自动记录 / 无障碍 -->
+    <!-- 无障碍相关的字符串已于 1.3 随服务一并移除。
+         真机（OriginOS 6 / Android 16）上该服务会被系统反复回收，
+         而自动记录不依赖它也能完整工作。 -->
+
+    <!-- 权限引导页 -->
+    <string name="perm_title">権限と常駐対策</string>
+    <string name="perm_section_state">現在の状態</string>
+    <string name="perm_usage">使用状況へのアクセス</string>
+    <string name="perm_notify">通知</string>
+    <string name="perm_battery">電池最適化の除外</string>
+    <string name="perm_autostart">自動起動</string>
+    <string name="perm_autostart_fallback">本機システムの自動起動ページが見つからなかったため、代替の入口を開きました。以下の説明に沿って探してください</string>
+    <string name="perm_autostart_note_done">上のページで設定済みとして扱います。この項目にはシステムの API がなく、アプリから実際の状態を取得できないため、この「オン」はあなたが操作した記録であって、システムの読み取り値ではありません。後でシステム側でオフにした場合は、この行をもう一度タップするとマークを解除できます。\n新しい端末では、メーカーの自動起動リストに本アプリが登録されるまで再起動が一度必要かもしれません。\n実はこの手順を省いても記録には影響しません —— 関係するのは「再起動後に自動で記録を続けられるか」だけです。</string>
+    <string name="perm_autostart_note_vendor">「%1$s」を開きました。本アプリまでスクロールし（リストはアプリ名順です）、「起動時の自動起動 / バックグラウンド起動」を両方オンにしてください。</string>
+    <string name="perm_autostart_note_manager">本機システムの自動起動ページが見つからなかったため、メーカーの権限管理アプリを開きました。その中で「自動起動 / バックグラウンド起動 / 起動時の起動」といった言葉を探してください。</string>
+    <string name="perm_autostart_note_detail">本機システムの自動起動ページが見つからなかったため、アプリの詳細を開きました。この端末には自動起動のスイッチが単独でない可能性があります（一部の ROM は電池やバックグラウンド管理に統合しています）。</string>
+    <string name="perm_autostart_unmarked">マークを解除しました。もう一度設定できます</string>
+
+    <!-- 权限页：Shizuku（仅当本机装了 Shizuku 才显示这一段）。
+         标题写成「实验性功能」而不是「Shizuku」：这一段是可选增强，
+         而且依赖第三方应用与它的授权状态，随时可能不可用 ——
+         把它当正式功能摆出来，用户会以为缺了它应用就不完整。 -->
+    <string name="perm_section_shizuku">実験的機能</string>
+    <string name="perm_shizuku">Shizuku</string>
+    <string name="perm_shizuku_granted">Shizuku の権限を取得しました</string>
+    <string name="perm_shizuku_denied">Shizuku の権限が許可されていません</string>
+    <string name="perm_shizuku_request_failed">許可を要求できませんでした。先に Shizuku アプリでサービスを起動してください</string>
+    <string name="perm_shizuku_not_ready">Shizuku はまだ利用できません</string>
+    <string name="perm_usage_already">「使用状況へのアクセス」はすでにあります</string>
+    <string name="perm_usage_granted">Shizuku 経由で「使用状況へのアクセス」を有効にしました</string>
+    <string name="perm_usage_grant_failed">Shizuku では有効にできませんでした。上の入口から手動で有効にしてください</string>
+
+    <!-- 应用名单页 -->
+    <string name="rules_title">アプリリスト</string>
+    <string name="rules_search">アプリ名またはパッケージ名で検索</string>
+    <string name="rules_exclude">除外</string>
+    <string name="rules_no_match">一致するアプリはありません</string>
+    <!-- 全部已安装应用有好几百个（含系统组件），一次全铺出来会卡，所以分页。
+         %1$d 是当前搜索词下还没渲染出来的条数 -->
+    <string name="rules_show_more">さらに表示（残り %1$d 個）</string>
+
+    <!-- 关于 -->
+    <string name="about_title">このアプリについて</string>    
+    <string name="about_version">バージョン %1$s（%2$d）</string>
+    <string name="about_pkg">パッケージ名 %1$s</string>
+</resources>

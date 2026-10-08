@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 单选指示：未选是空圆环（比原来的浅灰小方框显眼），选中在圆环里画一道绿勾 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/bg_check_on" />
+    <item android:state_selected="true" android:drawable="@drawable/bg_check_on" />
+    <item android:drawable="@drawable/bg_check" />
+</selector>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MATOlog</string>
+    <string name="tagline">Event log</string>
+
+    <!-- 开屏 -->
+    <string name="splash_sub">Three things only: write it down, look back, take it with you</string>
+
+    <!-- 检索跨度 -->
+    <string name="level_day">Day</string>
+    <string name="level_month">Month</string>
+    <string name="level_year">Year</string>
+    <string name="ctx_year_scope">Year view</string>
+    <string name="nav_prev">Previous</string>
+    <string name="nav_next">Next</string>
+
+    <!-- 主页关键词检索（1.3.5） -->
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search description or app name</string>
+    <string name="search_empty_hint">Type a keyword to search all records.</string>
+    <string name="search_no_result">No records containing \"%1$s\"</string>
+    <string name="search_count">%1$d found</string>
+    <string name="search_capped">Showing the most recent %1$d only. A more specific keyword shows more.</string>
+
+    <string name="action_add">New</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_back">Back</string>
+    <string name="action_more">More</string>
+    <string name="action_ok">OK</string>
+
+    <!-- 安全层：应用锁 -->
+    <string name="lock_setup_title">Set app lock</string>
+    <string name="lock_setup_msg">Put a 4–6 digit passcode on your records. The passcode is kept on this device as a salted hash only; if you forget it, it cannot be recovered, but your data stays.</string>
+    <string name="lock_confirm_title">Enter it again</string>
+    <string name="lock_verify_title">Enter passcode</string>
+    <string name="lock_wrong">Wrong passcode</string>
+    <string name="lock_skip">Not now</string>
+    <string name="lock_skipped">Skipped. You can set it from the menu anytime</string>
+    <string name="lock_mismatch">The two entries do not match</string>
+    <string name="passcode_hint">Passcode</string>
+    <string name="passcode_too_short">Passcode must be at least 4 digits</string>
+    <string name="passcode_enabled">App lock is on</string>
+
+    <!-- 安全层：加密导出 -->
+    <string name="export_encrypt_label">Encrypt</string>
+    <string name="export_encrypt_on">Encrypt this file</string>
+    <string name="export_encrypt_off">No encryption (plain JSON)</string>
+    <string name="import_passcode_title">This is an old encrypted export</string>
+    <string name="import_passcode_msg">Encrypted files from 1.3 and earlier tied the key to a passcode, so the passcode set at export time is required. From 1.3.1 on, no passcode is needed.</string>
+    <string name="import_passcode_wrong">Wrong passcode (this file comes from 1.3 or earlier and needs the passcode from back then)</string>
+    <string name="import_corrupt">This encrypted file is damaged or has been altered and cannot be opened</string>
+
+    <!-- 编辑界面 -->
+    <string name="edit_title_new">New record</string>
+    <string name="edit_title_edit">Edit record</string>
+    <string name="edit_time_label">Time</string>
+    <string name="edit_time_hint">Tap to change</string>
+    <string name="edit_desc_label">Description</string>
+    <string name="edit_desc_hint">Write down what happened…</string>
+    <string name="edit_empty_warning">Nothing written yet</string>
+    <string name="edit_saved">Saved</string>
+    <string name="edit_deleted">Deleted</string>
+    <string name="delete_confirm_title">Delete this record?</string>
+
+    <!-- 列表 / 空态 -->
+    <string name="empty_day">No records on this day</string>
+    <string name="empty_month">No records this month</string>
+    <string name="empty_year">No records this year</string>
+    <string name="empty_hint">Tap \"New\" in the bottom right to log something</string>
+    <string name="count_unit">rec</string>
+    <string name="count_none">—</string>
+    <string name="hint_tap_day">Tap a day → see all records for that day</string>
+    <string name="hint_tap_month">Tap a month → see that month\'s calendar</string>
+
+    <!-- 菜单 -->
+    <string name="menu_export">Export JSON</string>
+    <string name="menu_import">Import JSON</string>
+    <string name="menu_backup">Backup and restore</string>
+    <string name="menu_attachments">Attached files</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_look">Appearance</string>
+    <string name="settings_dark">Dark mode</string>
+
+    <!-- 设置：自动记录 -->
+    <string name="settings_section_record">Auto record</string>
+    <string name="settings_section_more">Rules and permissions</string>
+    <string name="settings_auto_record">Auto record</string>
+    <string name="settings_on">On</string>
+    <string name="settings_off">Off</string>
+    <string name="settings_interval">Sampling interval</string>
+    <string name="settings_interval_msg">How often the foreground app is checked. Shorter means the ongoing notification keeps up better and segment boundaries are more precise, at the cost of a little more battery. Enter seconds; default is 5. It slows down automatically when the screen is off.</string>
+    <string name="settings_min_keep">Ignore anything shorter than</string>
+    <string name="settings_min_keep_msg">Fragments that are too short are just noise; the default is 5 minutes as required. Enter 0 to record everything (no threshold).</string>
+    <string name="settings_min_keep_all">Record everything</string>
+    <!-- 自定义分钟输入：单位、范围提示、0 的特殊含义 -->
+    <string name="settings_minutes_unit">minutes</string>
+    <string name="settings_seconds_unit">seconds</string>
+    <string name="settings_minutes_range">Enter a whole number between %1$d and %2$d</string>
+    <string name="settings_seconds_range">Enter a whole number of seconds between %1$d and %2$d</string>
+    <string name="settings_min_keep_zero_hint">0 records everything; even the shortest fragment stays on the timeline.</string>
+    <string name="settings_record_no_perm">Auto record is on but the \"Usage access\" permission is missing, so nothing can be recorded yet. Tap \"Permissions and keep-alive\" below to grant it.</string>
+    <string name="settings_record_started">Recording started</string>
+    <string name="settings_record_stopped">Recording stopped</string>
+    <string name="settings_need_perm_title">One permission missing</string>
+    <string name="settings_need_perm_msg">Auto record needs \"Usage access\" to know which app is in the foreground. Without it, turning it on records nothing at all — so go and enable it first.</string>
+    <string name="settings_go_grant">Grant it</string>
+
+    <!-- 设置：名单与权限 -->
+    <string name="settings_rules">App rules</string>
+    <string name="settings_rules_none">Not set</string>    <string name="settings_perm">Permissions and keep-alive</string>
+    <string name="settings_perm_ok">Ready</string>
+    <string name="settings_perm_need">Permission missing</string>
+
+    <!-- 设置：数据与缓存 -->
+    <string name="settings_section_data">Data and cache</string>
+    <string name="settings_cache">Cache directory</string>
+
+    <!-- 外观：语言（1.3.5） -->
+    <string name="settings_lang">Language</string>
+    <string name="lang_follow">Follow system</string>
+    <string name="lang_zh_cn">简体中文</string>
+    <string name="lang_zh_tw">繁體中文</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국어</string>
+    <string name="lang_en">English</string>
+
+    <!-- 深色档位 -->
+    <string name="dark_follow">Follow system</string>
+    <string name="dark_on">Always dark</string>
+    <string name="dark_off">Always light</string>
+
+    <!-- 自动记录：状态行与常驻通知 -->
+    <string name="rec_note_no_foreground">No app in the foreground</string>
+    <string name="rec_note_self">This app itself, not counted</string>
+    <string name="rec_note_shell">System UI, not recorded</string>
+    <string name="rec_note_excluded">On the exclusion list</string>
+    <string name="rec_note_recording">Recording</string>
+    <string name="rec_note_screen_off">Screen is off</string>
+    <string name="rec_note_no_perm">The \"Usage access\" permission is missing, so the foreground app cannot be read</string>
+    <string name="rec_note_nothing">The screen is on but there is no foreground app to record</string>
+    <string name="rec_note_waiting">Waiting for a foreground app</string>
+    <string name="rec_note_no_perm_short">Usage access permission is missing</string>
+    <string name="rec_note_sample_error">Sampling error: %1$s</string>
+    <string name="rec_preparing_title">Getting ready to record</string>
+    <string name="rec_preparing_text">Reading the foreground app to build event records</string>
+    <string name="rec_recording_title">Recording</string>
+    <string name="rec_no_noti_perm">Allow this app to send notifications in system settings</string>
+    <string name="rec_inactive_title">Recording is not active</string>
+    <string name="rec_inactive_text">The \"Usage access\" permission is missing; tap to open settings</string>
+    <string name="rec_waiting_title">Recording · waiting for a foreground app</string>
+    <string name="rec_now_title">Recording · %1$s</string>
+    <string name="rec_noti_text">%1$s so far · %2$d today</string>
+    <string name="rec_action_refresh">Refresh</string>
+    <string name="rec_action_stop">Stop</string>
+    <string name="rec_channel_name">Auto record</string>
+    <string name="rec_channel_desc">The ongoing notification shown while recording; refresh or stop it here</string>
+
+    <!-- 设置页里那些「当前值」 -->
+    <string name="settings_rules_n">%1$d excluded</string>
+    <string name="settings_interval_sec">%1$d sec</string>
+    <string name="settings_interval_min">%1$d min</string>
+    <string name="settings_interval_note">The foreground app is checked every %1$s, so segment boundaries can lag by up to that much.</string>
+    <string name="settings_min_keep_n">%1$d min</string>
+
+    <!-- 名单页的汇总 -->
+    <string name="rules_summary_some">Excluded: %1$d (pinned to the top). Everything else is recorded.</string>
+    <string name="rules_summary_none">No apps excluded: everything is recorded except this app itself and System UI.</string>
+
+    <!-- 缓存页 -->
+    <string name="cache_tmp_label">Temporary files: %1$s</string>
+    <string name="cache_total">%1$s in total.</string>
+    <string name="cache_usage_note">These are all intermediate files. Deleting them does not affect recorded events or any settings.</string>
+
+    <!-- 附件存法（长文案）。短标签另有 attach_mode_internal / attach_mode_reference -->
+    <string name="attach_mode_internal_long">Stored in the app</string>
+    <string name="attach_mode_reference_long">Reference the original file</string>
+
+    <!-- 导出落点 -->
+    <string name="export_downloads_prefix">Download/%1$s</string>
+
+    <!-- 权限页的状态说明 -->
+    <string name="perm_mark_on">On</string>
+    <string name="perm_mark_go">Turn on</string>
+    <string name="perm_state_cannot">Recording is not possible right now: \"Usage access\" is missing.</string>
+    <string name="perm_state_can">Recording is possible right now:</string>
+    <string name="perm_state_running">\n\nThe recording service is running.</string>
+    <string name="perm_state_rules">\n\nExcluded: %1$d. Everything else is recorded.</string>
+
+    <!-- Shizuku（可选增强，只在装了它时才出现） -->
+    <string name="shizuku_not_installed">Shizuku is not installed</string>
+    <string name="shizuku_not_running">Shizuku is not running; open it and start the service first</string>
+    <string name="shizuku_too_old">The Shizuku version is too old (v11 or later is required)</string>
+    <string name="shizuku_no_permission">This app has not been granted Shizuku permission yet</string>
+    <string name="shizuku_ready">Available</string>
+
+    <!-- 设置：诊断（1.3.5） -->
+    <string name="settings_section_diag">Diagnostics</string>
+    <string name="settings_errorlog">Export error log</string>
+    <string name="settings_errorlog_none">Nothing to export yet</string>
+    <string name="settings_errorlog_n">%1$d · latest %2$s</string>
+    <string name="settings_errorlog_clear">Clear error log</string>
+    <string name="settings_errorlog_clear_title">Clear the error log?</string>
+    <string name="settings_errorlog_clear_msg">%1$d in total, latest %2$s.\n\nOnce cleared they cannot be exported, so export first if you want to keep the evidence.</string>
+    <string name="settings_errorlog_clear_ok">Clear</string>
+    <string name="settings_errorlog_cleared">Error log cleared</string>
+    <string name="settings_errorlog_gate">Nothing to export right now — the app has not run into any problems</string>
+    <string name="settings_errorlog_failed">Export failed; could not write to the Download directory</string>
+
+    <!-- 1.3.5：原来这里是一整段「自动整理（接入模型）」的文案 ——
+         ai_title / ai_section_* / ai_provider* / ai_use_* / ai_base* /
+         ai_key* / ai_http_warning / ai_model* / ai_need_* / ai_test* /
+         ai_run_now / ai_queued / ai_off_hint / ai_log_empty，共 39 条。
+         需求把自动整理整块删掉，这些文案一并移除：留着它们只会让翻译
+         白翻一遍、让 lint 报一批无人引用，而它们在界面上永远不会出现。 -->
+
+    <!-- 缓存目录 -->
+    <string name="cache_title">Cache directory</string>
+    <string name="cache_section_usage">Usage</string>
+    <string name="cache_section_actions">Cleanup</string>
+    <string name="cache_clear_all">Clear all cache</string>
+    <string name="cache_cleared_n">Cleared %1$d</string>
+    <string name="cache_note">The cache lives in the app\'s private directory and needs no storage permission. You can look at it and delete it yourself over a data cable or with a file manager, and uninstalling the app clears it too. The records themselves are in the database and are unrelated to this.</string>
+
+    <!-- 导出：日期区间 -->
+    <string name="export_title">Export JSON</string>
+    <string name="export_range_label">Export range</string>
+    <string name="export_range_today">Today</string>
+    <string name="export_range_week">This week</string>
+    <string name="export_range_month">This month</string>
+    <string name="export_range_year">This year</string>
+    <string name="export_range_all">All dates</string>
+    <string name="export_range_custom">Custom date range</string>
+    <string name="export_field_from">Start</string>
+    <string name="export_field_to">End</string>
+    <string name="export_files_label">Attached files</string>
+    <string name="export_files_off">Records only, no attachments</string>
+    <string name="export_files_on">Take the attachment contents along (a bigger file)</string>
+    <string name="export_files_note">By default only the records are exported and attachments stay on this device. With attachments included, the files come back too when the export is imported on another machine.</string>
+    <string name="export_summary">Records to export: %1$d · %2$s</string>
+    <string name="export_summary_files">Records to export: %1$d · %2$s · attachments included: %3$d (%4$s)</string>
+    <string name="export_range_none">No records in this range</string>
+    <string name="export_go">Choose where to save</string>
+    <string name="export_range_invalid">The end date cannot be earlier than the start date</string>
+    <string name="export_missing_title">Some attachments can no longer be read</string>
+    <string name="export_missing_msg">Attachments in this range have been moved or deleted and their contents cannot be taken along (the registry entry is still written to the file). Export anyway?</string>
+    <string name="export_missing_keep">Export anyway</string>
+
+    <!-- 附件 -->
+    <string name="attach_section">Attachments</string>
+    <string name="attach_add">Add attachment</string>
+    <string name="attach_hint">Kept on this device by default; when exporting you choose whether to take them along</string>
+    <string name="attach_way_title">How should this attachment be stored</string>
+    <string name="attach_way_internal">Store inside the app</string>
+    <string name="attach_way_reference">Reference the original file</string>
+    <string name="attach_mode_internal">In-app</string>
+    <string name="attach_mode_reference">Reference</string>
+    <string name="attach_failed">This file cannot be read; try another one</string>
+    <string name="attach_missing">The file is gone</string>
+    <string name="attach_open_failed">Cannot open this file; it may have been moved or deleted</string>
+    <string name="attach_count">%1$d</string>
+    <string name="attach_delete_title">Delete this attachment?</string>
+    <string name="attach_delete_msg">%1$s\n\nFiles stored inside the app are deleted as well; a reference is only unregistered and the original file is left alone.</string>
+    <string name="attach_deleted">Attachment deleted</string>
+
+    <!-- 删除事件时对附件的处理 -->
+    <string name="delete_attach_title">This record has attachments</string>
+    <string name="delete_attach_msg">Attachments: %1$d. Delete them as well, or keep them to view later under \"Attached files\"?</string>
+    <string name="delete_attach_together">Delete the attachments too</string>
+    <string name="delete_attach_keep">Keep the attachments</string>
+    <string name="delete_attach_kept_hint">Record deleted; the attachments remain under \"Attached files\" in the menu</string>
+
+    <!-- 附带文件（孤立附件）页 -->
+    <string name="attach_page_title">Attached files</string>
+    <string name="attach_page_empty">No attachments need managing separately</string>
+    <string name="attach_page_clear">Clear all</string>
+    <string name="attach_page_clear_title">Delete all attached files?</string>
+    <string name="attach_page_clear_msg">Files: %1$d, %2$s. Deletion cannot be undone.</string>
+    <string name="attach_page_sweep">Clear unregistered leftover files</string>
+    <string name="attach_page_swept">Cleared %1$s</string>
+    <string name="attach_page_swept_none">No leftover files to clear</string>
+    <string name="attach_page_open">Open</string>
+    <string name="attach_page_total">In-app attachments: %1$d · %2$s used</string>
+    <string name="attach_external_note">%1$d of them \"reference the original file\": the file is still in its original location on the phone and the app only stores a path, so they take up 0 space.</string>
+
+    <!-- 备份 -->
+    <string name="backup_title">Backup and restore</string>
+    <string name="backup_local_title">On-device backups</string>
+    <string name="backup_local_desc">Every export automatically leaves an on-device backup; at most 12 are kept.</string>
+    <string name="backup_export">Export to file</string>
+    <string name="backup_import">Import from file</string>
+    <string name="backup_now">Back up now</string>
+    <string name="backup_now_done">An on-device backup has been kept</string>
+    <string name="backup_restore">Restore</string>
+    <string name="backup_delete">Delete</string>
+    <string name="backup_restore_hint">Tap a row to restore that backup · delete on the right</string>
+    <string name="backup_none">No on-device backups yet</string>
+    <string name="backup_restore_title">Restore this backup?</string>
+    <string name="backup_restore_msg">The records in the backup will overwrite all current records. A backup of the current data is kept automatically before restoring.</string>
+    <string name="backup_delete_title">Delete this backup?</string>
+    <string name="backup_done">Exported</string>
+    <string name="export_nothing">No records to export yet</string>
+    <string name="export_where_title">Where to export</string>
+    <string name="export_where_msg">Records right now: %1$d. Saving to the system Download directory is the easiest, or you can pick a location yourself.</string>
+    <string name="export_where_download">Save to Download</string>
+    <string name="export_where_pick">Pick a location</string>
+    <string name="export_saved_to">Saved to %1$s</string>
+    <string name="export_need_permission">No storage permission; save by picking a location instead</string>
+    <string name="export_retry_title">This location cannot be written to</string>
+    <string name="export_retry_msg">The file contents are already saved on this device; they just could not be written to the location you chose. Save again somewhere else?</string>
+    <string name="export_retry_yes">Try another location</string>
+    <string name="export_retry_keep">Later</string>
+    <string name="export_pending_title">The last export was not saved completely</string>
+    <string name="export_pending_msg">The contents are already saved on this device. The system interrupted that save; write it to a file now?</string>
+    <string name="export_pending_save">Save it now</string>
+    <string name="export_pending_discard">Discard it</string>
+    <string name="backup_export_failed">Export failed</string>
+    <string name="backup_import_failed">Import failed; the file format is not recognized</string>
+    <string name="backup_import_title">Import these records?</string>
+    <string name="import_mode_merge">Merge (skip duplicates)</string>
+    <string name="import_mode_append">Append all</string>
+    <string name="import_mode_replace">Clear, then import</string>
+    <string name="backup_summary">Records: %1$d · %2$s</string>
+    <string name="backup_imported">%1$d imported</string>
+    <string name="import_files_registered_only">Attachments with registry entries only: %1$d (\"take the attachment contents along\" was not checked at export time); the files are still on the original device</string>
+
+    <!-- 记录来源小标（混排时用来区分自动记录与手动记录） -->
+    <string name="source_auto">Auto</string>
+    <string name="source_screen">Screen</string>
+
+    <!-- 自动记录 / 无障碍 -->
+    <!-- 无障碍相关的字符串已于 1.3 随服务一并移除。
+         真机（OriginOS 6 / Android 16）上该服务会被系统反复回收，
+         而自动记录不依赖它也能完整工作。 -->
+
+    <!-- 权限引导页 -->
+    <string name="perm_title">Permissions and keep-alive</string>
+    <string name="perm_section_state">Current status</string>
+    <string name="perm_usage">Usage access</string>
+    <string name="perm_notify">Notifications</string>
+    <string name="perm_battery">Battery optimization allowlist</string>
+    <string name="perm_autostart">Autostart</string>
+    <string name="perm_autostart_fallback">No autostart page was found for this system, so a substitute entry point was opened; follow the instructions below to find it</string>
+    <string name="perm_autostart_note_done">You have set this up on the page above. This item has no system API, so the app cannot read its real state, and this \"On\" is a record of your action rather than a system reading: if you later turn it off in the system, tap this row again to unmark it.\nOn a newly set up device, the vendor\'s autostart list may need a reboot before it includes this app.\nLeaving this step out does not affect recording anyway — it only decides whether recording picks up by itself after a reboot.</string>
+    <string name="perm_autostart_note_vendor">Opened \"%1$s\". Find this app in the list (sorted by app name) and turn on both its boot start and its background start.</string>
+    <string name="perm_autostart_note_manager">No autostart page was found for this system, so the vendor\'s permission manager app was opened. Look there for wording such as autostart, background start, or boot start.</string>
+    <string name="perm_autostart_note_detail">No autostart page was found for this system, so the app details screen was opened. This device may have no separate autostart switch (some ROMs fold it into battery or background management).</string>
+    <string name="perm_autostart_unmarked">Mark removed; you can set it once more</string>
+
+    <!-- 权限页：Shizuku（仅当本机装了 Shizuku 才显示这一段）。
+         标题写成「实验性功能」而不是「Shizuku」：这一段是可选增强，
+         而且依赖第三方应用与它的授权状态，随时可能不可用 ——
+         把它当正式功能摆出来，用户会以为缺了它应用就不完整。 -->
+    <string name="perm_section_shizuku">Experimental features</string>
+    <string name="perm_shizuku">Shizuku</string>
+    <string name="perm_shizuku_granted">Shizuku permission granted</string>
+    <string name="perm_shizuku_denied">Shizuku permission not granted</string>
+    <string name="perm_shizuku_request_failed">Could not request authorization; start the service in the Shizuku app first</string>
+    <string name="perm_shizuku_not_ready">Shizuku is not available yet</string>
+    <string name="perm_usage_already">\"Usage access\" is already granted</string>
+    <string name="perm_usage_granted">\"Usage access\" turned on through Shizuku</string>
+    <string name="perm_usage_grant_failed">Shizuku could not turn it on; use the entry point above to enable it manually</string>
+
+    <!-- 应用名单页 -->
+    <string name="rules_title">App rules</string>
+    <string name="rules_search">Search app or package name</string>
+    <string name="rules_exclude">Exclude</string>
+    <string name="rules_no_match">No matching apps</string>
+    <!-- 全部已安装应用有好几百个（含系统组件），一次全铺出来会卡，所以分页。
+         %1$d 是当前搜索词下还没渲染出来的条数 -->
+    <string name="rules_show_more">Show more (%1$d left)</string>
+
+    <!-- 关于 -->
+    <string name="about_title">About</string>    
+    <string name="about_version">Version %1$s (%2$d)</string>
+    <string name="about_pkg">Package %1$s</string>
+</resources>

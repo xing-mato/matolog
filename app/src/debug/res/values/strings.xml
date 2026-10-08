@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  只给调试包用的资源覆盖（release 包完全不受影响）。
+
+  为什么需要它：调试包的包名是 com.MATO.log.debug，但标签默认跟正式包一样是「MATOlog」。
+  于是同一台机器上装了两个包时，桌面图标、最近任务、以及**厂商的自启动/权限这类系统列表**
+  里都会出现两条一模一样的「MATOlog」——没法分辨点的是哪一个。
+
+  实测过：vivo 的自启动列表就是按包各列一行，两个包 = 两行同名项。
+  这跟「只列了一个」的现象对不上，查了半天才发现被列出的那一行其实是调试包。
+
+  这里只改调试包的显示名，正式包保持「MATOlog」不变。
+-->
+<resources>
+    <string name="app_name" translatable="false">MATOlog 调试</string>
+</resources>

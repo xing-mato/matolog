@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  深色下的主题差异。
+
+  这里**只写与浅色不同的项**。理由：themes.xml 里的每个 <item> 都会被显式设置，
+  而在 values-night 里再写一遍同样的值只是重复，容易出现两边改一处漏一处。
+  真正必须覆盖的只有两处：
+    1. 父主题不能用 Theme.Material.Light.*（否则系统控件按浅色画）
+    2. windowLightStatusBar / windowLightNavigationBar 必须是 false
+       —— 它们是「显式设置」的，不会因为换了父主题就自动变，必须显式改掉
+-->
+<resources>
+
+    <style name="Theme.MATOlog" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- 弹窗：深色下同样换成 Material 深色弹窗底色 -->
+    <style name="Theme.MATOlog.Dialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+    </style>
+
+</resources>
