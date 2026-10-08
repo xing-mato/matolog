@@ -19,8 +19,6 @@ local.properties
 build/
 
 # Gradle 发行包：wrapper 会自己去 services.gradle.org 取，不需要备在这里。
-# 注意本机上这份 gradle-8.0-bin.zip 是**坏的**（10 MB，不是有效 zip），
-# 留着它只会让人以为能离线构建。
 gradle/gradle-*-bin.zip
 
 # ------------------------------------------------------------
