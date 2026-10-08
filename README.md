@@ -76,17 +76,7 @@ source only.
 
 ```bash
 adb install -r MATOlog-1.0.0-release.apk
-```
 
-> **Version numbering notice.** Builds `1.0`–`1.3.5` were a **closed internal-test line** signed
-> with an older key. Public development restarts at **1.0.0** with a new signing key, so the
-> internal builds cannot be upgraded in place — uninstall first. Export your data to JSON before
-> you do; the encryption key material travels inside the exported file, so importing it into a
-> fresh install needs no passphrase.
->
-> **版本号说明。** `1.0`–`1.3.5` 是**已封存的内测线**，用旧密钥签名。公开线从 **1.0.0**
-> 重新起算、换用新密钥，因此**与内测版签名不同、不能覆盖安装**。升级前请先导出 JSON；
-> 加密导出的密钥材料随文件走，装好新包后直接导入即可，不需要任何口令。
 
 ---
 
