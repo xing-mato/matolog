@@ -145,17 +145,6 @@ MATOlog/
 │   └── AndroidManifest.xml
 └── tools/             Offline regression checks (plain Java, run on the JVM)
 ```
-
----
-
-## Status / 现状
-
-**Tested on:** vivo Z1 (Android 9) and vivo V2425A (OriginOS 6 / Android 16). **Other vendors'
-ROMs are untested** — background-killing policies differ wildly, so reports are welcome.
-
-There are 200+ offline regression checks under `tools/` that run on the JVM without a device.
-Known gaps are tracked in the project's handover document (Chinese).
-
 ---
 
 ## Contributing / 参与
