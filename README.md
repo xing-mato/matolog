@@ -53,7 +53,6 @@ signing setup:
   Shizuku isn't installed.
 - **minSdk 24** (Android 7.0) · **targetSdk 34**
 - Storage: SQLite (`databases/matolog.db`)
-- No `INTERNET` permission, no analytics, no crash reporting
 ---
 ### Project layout
 
